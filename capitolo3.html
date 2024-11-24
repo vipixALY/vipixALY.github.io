@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITOLO3</title>
+    <link rel="stylesheet" href="css/capitolo3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="button">
+        <a href="copertina.html" class="btn"><i class="fas fa-home"></i> COPERTINA</a>
+        <a href="indice.html" class="btn"><i class="fas fa-list"></i> INDICE</a>
+        <a href="capitolo1.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 1</a>
+        <a href="capitolo2.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 2</a>
+        <a href="#" class="btn"><i class="fas fa-book"></i> CAPITOLO 3</a>
+    </div>
+
+    <div id="menu-button" onclick="toggleMenu()">☰</div>
+    <div id="navbar">
+        <a href="#TASTIERA">Tastiera</a>
+        <a href="#NUMERI">Numeri</a>
+        <a href="#IMMAGINI">Immagini</a>
+        <a href="#AUDIO">Audio</a>
+      </div>
+
+    <h1><mark> CAPITOLO 3 :</mark> </h1>
+    <div class="image-container">
+     <img src="img/img cap3.png" alt="immagine cap3" class="small-img">
+    </div>
+    <h1><mark> Cap-3 CODIFICHE :</mark></h1>
+
+    <h2 id="TASTIERA">1. TASTIERA :</h2>
+    <div class="image-container">
+     <img src="img/img1.jpg" alt="errore" class="small-img">
+    </div>
+    <p>Codifica dei testi utilizzando ASCII, un sistema che rappresenta lettere, numeri e simboli tramite codici numerici (di solito 7 o 8 bit).</p>
+
+    <h2 id="NUMERI">2. NUMERI (INTERI E REALI) :</h2>
+    <div class="image-container">
+     <img src="img/img2.png" alt="errore">
+    </div>
+    <p>Rappresentazione di numeri interi (Interi) e numeri reali (Reali) in formato digitale per l'elaborazione.</p>
+
+   <h2 id="IMMAGINI">3. IMMAGINI :</h2>
+   <div class="image-container">
+     <img src="img/img3.jpg" alt="errore">
+   </div>
+   <p>Codifica delle immagini in formati digitali come BMP, JPEG, PNG, ecc., convertendo le immagini in pixel e valori di colore.</p>
+
+   <h2 id="AUDIO">4. AUDIO :</h2>
+   <div class="image-container">
+     <img src="img/img4.png" alt="errore">
+   </div>
+   <p>Codifica del suono convertendo le onde sonore in segnali digitali tramite tecniche come MP3, WAV o AAC.</p>
+
+
+
+
+   <script>
+
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      if (navbar.style.display === "none" || navbar.style.display === "") {
+        navbar.style.display = "flex"; // Mostra il menu
+      } else {
+        navbar.style.display = "none"; // Nascondi il menu
+      }
+    }
+
+    // Aggiungi questo codice per chiudere il menu quando si clicca altrove
+    document.addEventListener('click', function (event) {
+      const navbar = document.getElementById("navbar");
+      const menuButton = document.getElementById("menu-button");
+
+      // Se il clic non è sul menu e nemmeno sul pulsante del menu, chiudi il menu
+      if (!navbar.contains(event.target) && !menuButton.contains(event.target)) {
+        navbar.style.display = "none";
+      }
+    });
+
+    // Chiudi il menu quando un link viene cliccato
+    const links = document.querySelectorAll('#navbar a');
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        const navbar = document.getElementById("navbar");
+        navbar.style.display = "none"; // Nascondi il menu
+      });
+    });
+     </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

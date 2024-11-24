@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(91, 77, 104);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0px;
+}
+
+.button {
+  text-align: center; /* Center align buttons */
+  margin-top: 1px; /* Space above the button div */
+}
+
+.btn {
+  display: inline-block; /* Make the link behave like a button */
+  padding: 12px 24px; /* Padding inside the button */
+  margin: 10px; /* Space between buttons */
+  background: linear-gradient(
+    45deg,
+    #5a5a5a,
+    #757575
+  ); /* Gradient background */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for effects */
+}
+
+.btn:hover {
+  color: red;
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+#menu-button {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* تصميم شريط الروابط */
+#navbar {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  display: none; /* يبدأ غير مرئي */
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+  font-size: 16px;
+}
+
+#navbar a:hover {
+  background-color: #555;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 450px;
+  height: 50%;
+  margin: 0 auto;
+  padding: 0, 0;
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex; /* Utilizza Flexbox per il layout */
+  justify-content: space-between; /* Spazia gli elementi ai lati */
+  align-items: flex-start; /* Allinea gli elementi all'inizio del contenitore */
+}
+
+.hardware,
+.soft {
+  width: 30%; /* Imposta una larghezza per ciascun div */
+  padding: 10px; /* Aggiungi padding se necessario */
+}
+
+img {
+  width: 450px; /* Larghezza dell'immagine */
+  height: auto; /* Mantiene il rapporto di aspetto */
+  margin: 0 20px; /* Margine orizzontale per separare l'immagine dai testi */
+}
+
+p {
+  margin: 10px 0; /* Space between paragraphs */
+  color: white;
+}
+
+ul {
+  margin: 10px 0; /* Space above and below the list */
+  color: white;
+}

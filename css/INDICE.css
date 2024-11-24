@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(91, 77, 104);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    text-align: center; /* Center align buttons */
+    margin-top: 1px; /* Space above the button div */
+}
+
+.btn {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 12px 24px ; /* Padding inside the button */
+    margin: 10px; /* Space between buttons */
+    background: linear-gradient(45deg, #5a5a5a, #757575); /* Gradient background */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for effects */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    color: red;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.btn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+h3{
+    font-size: large;
+    color: red;
+    margin: 5px;
+    text-align: center;
+    }
+h1{
+    text-align: center;
+}
+
+img{
+    width: 450px;
+    height: 50%;
+    margin: 0 auto;
+}
+
+p{
+    text-align: center;
+}

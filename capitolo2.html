@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/capitolo2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>CAPITOLO 2</title>
+</head>
+
+<body>
+  <div class="button">
+    <a href="copertina.html" class="btn"><i class="fas fa-home"></i> COPERTINA</a>
+    <a href="indice.html" class="btn"><i class="fas fa-list"></i> INDICE</a>
+    <a href="capitolo1.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 1</a>
+    <a href="#" class="btn"><i class="fas fa-book"></i> CAPITOLO 2</a>
+    <a href="capitolo3.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 3</a>
+  </div>
+
+  <h1 id="UP"><mark> CAPITOLO 2 : </mark></h1>
+  <h3> Il computer è composto da due parti principali: hardware e software.</h3>
+
+  <p><img src="img/Hardware Software.png" alt="errore" /></p>
+
+  <div id="menu-button" onclick="toggleMenu()">☰</div> 
+  <div id="navbar">
+    <a href="#Schede">Schede</a>
+    <a href="#periferiche">Periferiche</a>
+  </div>
+
+
+  <div class="container">
+    <div class="hardware">
+      <h2><mark>1. Hardware :</mark></h2>
+      <h3>“ L'hardware è costituito dai componenti fisici che formano il sistema, come il processore, la memoria RAM e
+        il disco rigido. Questi componenti fungono da infrastruttura per il computer, eseguendo comandi e elaborando
+        dati. L'hardware include anche altri elementi come tastiera, mouse e monitor, che consentono all'utente di
+        interagire con il sistema.”</h3>
+    </div>
+
+    <div class="soft">
+      <h2><mark>2. Software :</mark></h2>
+      <h3>“Il software è un insieme di istruzioni e codici che permettono all'hardware di svolgere funzioni specifiche.
+        Si divide in due categorie principali: i sistemi operativi (come Windows e Linux) che gestiscono le risorse
+        hardware, e le applicazioni (come programmi di elaborazione testi o giochi) che eseguono compiti specifici. Il
+        software è essenziale per il funzionamento del computer, poiché consente agli utenti di svolgere diverse
+        operazioni con facilità.”</h3>
+    </div>
+  </div>
+
+  <div class="container1">
+    <h2 id="Schede"><mark>1. Schede di espansione (componenti interne) :</mark></h2>
+    <p>Le schede di espansione sono componenti interne del computer che si inseriscono nella scheda madre per aggiungere
+      nuove funzionalità o migliorare quelle esistenti.</p>
+
+    <p><strong>Esempi di schede di espansione:</strong></p>
+    <ul>
+      <li><strong>Scheda video (GPU):</strong> Migliora la grafica del computer, fondamentale per i giochi, il design e
+        l'editing video.</li>
+      <li><strong>Scheda audio:</strong> Migliora la qualità del suono, utile per registrazioni audio o per ascoltare
+        musica in alta qualità.</li>
+      <li><strong>Scheda di rete (NIC):</strong> Permette di connettere il computer a Internet o a una rete locale.</li>
+      <li><strong>Scheda RAID:</strong> Gestisce più dischi rigidi o SSD per migliorare le prestazioni o la sicurezza
+        dei dati.</li>
+    </ul>
+
+    <h2 id="periferiche"><mark>2. Periferiche (dispositivi esterni) :</mark></h2>
+    <p>Le periferiche sono dispositivi esterni che si collegano al computer tramite porte come USB, HDMI, ecc. Servono
+      per aggiungere funzionalità o permettere l'interazione con il computer.</p>
+
+    <p><strong>Esempi di periferiche:</strong></p>
+    <ul>
+      <li><strong>Tastiera (Keyboard):</strong> Per scrivere e interagire con il computer.</li>
+      <li><strong>Mouse:</strong> Per muovere il cursore e fare clic sugli elementi sullo schermo.</li>
+      <li><strong>Monitor:</strong> Per visualizzare le immagini e le informazioni del computer.</li>
+      <li><strong>Stampante:</strong> Per stampare documenti.</li>
+      <li><strong>Hard disk esterno:</strong> Per archiviare o trasferire dati.</li>
+    </ul>
+
+    <h2><mark>Differenza tra Schede di espansione e Periferiche:</mark></h2>
+    <p><strong>Schede di espansione:</strong> componenti interne che migliorano il funzionamento del computer.<br>
+      <strong>Periferiche:</strong> dispositivi esterni che si collegano al computer per aggiungere funzioni, come
+      stampare, immagazzinare dati o interagire con il sistema.
+    </p>
+
+    <h2><mark>Riassunto:</mark></h2>
+    <p><strong>Schede di espansione:</strong> Componenti interne che migliorano le prestazioni del computer (es. scheda
+      video, audio, di rete).<br>
+      <strong>Periferiche:</strong> Dispositivi esterni che aggiungono funzioni al computer (es. tastiera, mouse,
+      monitor, stampante).
+    </p>
+  </div>
+
+
+
+  <script>
+
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      if (navbar.style.display === "none" || navbar.style.display === "") {
+        navbar.style.display = "flex"; // Mostra il menu
+      } else {
+        navbar.style.display = "none"; // Nascondi il menu
+      }
+    }
+
+    // Aggiungi questo codice per chiudere il menu quando si clicca altrove
+    document.addEventListener('click', function (event) {
+      const navbar = document.getElementById("navbar");
+      const menuButton = document.getElementById("menu-button");
+
+      // Se il clic non è sul menu e nemmeno sul pulsante del menu, chiudi il menu
+      if (!navbar.contains(event.target) && !menuButton.contains(event.target)) {
+        navbar.style.display = "none";
+      }
+    });
+
+    // Chiudi il menu quando un link viene cliccato
+    const links = document.querySelectorAll('#navbar a');
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        const navbar = document.getElementById("navbar");
+        navbar.style.display = "none"; // Nascondi il menu
+      });
+    });
+  </script>
+</body>
+
+</html>
