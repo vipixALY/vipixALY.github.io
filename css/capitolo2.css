@@ -124,3 +124,16 @@ ul {
   margin: 10px 0; /* Space above and below the list */
   color: white;
 }
+
+table {
+  width: 500px;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
