@@ -1,0 +1,148 @@
+!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Animation</title>
+  <style>
+    /* إعدادات عامة */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1e1e2e;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* الحاوية الرئيسية */
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* الدائرة المتحركة */
+    .loading-circle {
+      width: 100px;
+      height: 100px;
+      border: 8px solid rgba(255, 255, 255, 0.3);
+      border-top: 8px solid #ff9800;
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #ff9800;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* الأرقام مع أنميشن التلاشي */
+    .number {
+      position: absolute;
+      opacity: 1;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* كلمة GIOCHI */
+    .loading-text {
+      font-size: 2em;
+      margin: 10px 0;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* شريط التحميل */
+    .loading-bar {
+      width: 200px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .loading-progress {
+      height: 100%;
+      width: 0;
+      background-color: #ff9800;
+      transition: width 2s linear;
+    }
+
+    /* أنميشن الدوران */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- شاشة التحميل -->
+  <div class="loading-container">
+    <div class="loading-circle">
+      <div id="number5" class="number">5</div>
+      <div id="number6" class="number" style="opacity: 0;">6</div>
+    </div>
+    <div class="loading-text">GIOCHI</div>
+    <div class="loading-bar">
+      <div class="loading-progress" id="loading-progress"></div>
+    </div>
+  </div>
+
+  <script>
+    // تعريف العناصر
+    const number5 = document.getElementById('number5');
+    const number6 = document.getElementById('number6');
+    const loadingProgress = document.getElementById('loading-progress');
+
+    let progress = 0;
+
+    const interval = setInterval(() => {
+      progress += 10; // زيادة التقدم
+      loadingProgress.style.width = `${progress}%`;
+
+      // عند الوصول إلى 100% نغير الأنميشن من 5 إلى 6
+      if (progress >= 100) {
+        clearInterval(interval);
+
+        // إضافة تأثير التلاشي والظهور
+        number5.classList.add('fade-out');
+        setTimeout(() => {
+          number5.style.display = 'none';
+          number6.classList.add('fade-in');
+          number6.style.opacity = 1;
+          
+          // إعادة التوجيه بعد الأنميشن
+          setTimeout(() => {
+            window.location.href = "https://vipixaly.github.io/APP_5GIOCHI.html"; // الرابط المطلوب
+          }, 1000); // تأخير بسيط بعد ظهور الرقم 6
+        }, 1000); // تأخير لإتمام تلاشي الرقم 5
+      }
+    }, 200); // كل 200 ملي ثانية
+  </script>
+</body>
+</html>
