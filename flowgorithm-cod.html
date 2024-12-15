@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Guadagno Giornaliero</title>
+    <script>
+        function calcolaGuadagno() {
+            // Ottieni i valori dagli input
+            const nAltoFusto = parseInt(document.getElementById("altoFusto").value);
+            const nMedioFusto = parseInt(document.getElementById("medioFusto").value);
+            const nPiccoloFusto = parseInt(document.getElementById("piccoloFusto").value);
+
+            const prezzoAltoFusto = 50;
+            const prezzoMedioFusto = 30;
+            const prezzoPiccoloFusto = 20;
+
+            // Calcola il guadagno per ogni tipo di pianta con il relativo sconto
+            const guadagnoAltoFusto = prezzoAltoFusto * 0.90 * nAltoFusto; // Sconto del 10%
+            const guadagnoMedioFusto = prezzoMedioFusto * 0.95 * nMedioFusto; // Sconto del 5%
+            const guadagnoPiccoloFusto = prezzoPiccoloFusto * 0.98 * nPiccoloFusto; // Sconto del 2%
+
+            // Calcola il guadagno totale e arrotondalo al numero intero più vicino
+            const guadagnoTotale = Math.round(guadagnoAltoFusto + guadagnoMedioFusto + guadagnoPiccoloFusto);
+
+            // Mostra il risultato sulla pagina
+            document.getElementById("guadagnoGiornaliero").innerText = "Guadagno giornaliero: " + guadagnoTotale + "€";
+
+            // Determina il tipo di guadagno
+            let tipoGuadagno = "";
+            if (guadagnoTotale > 3000) {
+                tipoGuadagno = "Buon guadagno";
+            } else if (guadagnoTotale >= 1000) {
+                tipoGuadagno = "Guadagno medio";
+            } else {
+                tipoGuadagno = "Scarso guadagno";
+            }
+
+            document.getElementById("tipoGuadagno").innerText = tipoGuadagno;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcola il guadagno giornaliero dalla vendita delle piante</h1>
+    
+    <label for="altoFusto">Numero di piante ad alto fusto:</label>
+    <input type="number" id="altoFusto" value="100"><br><br>
+    
+    <label for="medioFusto">Numero di piante a medio fusto:</label>
+    <input type="number" id="medioFusto" value="150"><br><br>
+    
+    <label for="piccoloFusto">Numero di piante a piccolo fusto:</label>
+    <input type="number" id="piccoloFusto" value="200"><br><br>
+    
+    <button onclick="calcolaGuadagno()">Calcola il guadagno</button>
+    
+    <h2 id="guadagnoGiornaliero"></h2>
+    <h3 id="tipoGuadagno"></h3>
+</body>
+</html>
