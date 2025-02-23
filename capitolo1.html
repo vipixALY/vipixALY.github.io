@@ -67,9 +67,9 @@ D'altra parte, l'uso eccessivo della tecnologia può portare a problemi di salut
     function toggleMenu() {
       const navbar = document.getElementById("navbar");
       if (navbar.style.display === "none" || navbar.style.display === "") {
-        navbar.style.display = "flex"; // Mostra il menu
+        navbar.style.display = "flex"; 
       } else {
-        navbar.style.display = "none"; // Nascondi il menu
+        navbar.style.display = "none"; 
       }
     }
 
@@ -86,7 +86,7 @@ D'altra parte, l'uso eccessivo della tecnologia può portare a problemi di salut
     links.forEach(link => {
       link.addEventListener('click', function () {
         const navbar = document.getElementById("navbar");
-        navbar.style.display = "none"; // Nascondi il menu
+        navbar.style.display = "none"; 
       });
     });
   </script>
