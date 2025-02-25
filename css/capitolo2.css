@@ -148,19 +148,19 @@ th {
 }
 
 .arrow-up {
-  font-size: 50px; 
-  color: #007bff; 
-  cursor: pointer; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
+  font-size: 50px;
+  color: #007bff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 .arrow-up:hover {
-  color: #0056b3; 
+  color: #0056b3;
 }
 
-.td1{
+.td1 {
   color: white;
 }
 
@@ -168,4 +168,38 @@ table {
   width: 95%;
   border-collapse: collapse;
   margin: 0 auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #0056b3;
+}
+
+.hardware.active,
+.soft.active {
+  display: block;
+}
+
+.hardware,
+.soft {
+  display: none;
 }
