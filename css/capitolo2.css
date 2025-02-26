@@ -129,7 +129,7 @@ p {
 
 ul {
   margin: 10px 0;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 table {
@@ -139,12 +139,13 @@ table {
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #dddddd86;
+  padding: 8px ;
   text-align: left;
+
 }
 th {
-  background-color: #f4f4f4;
+  background-color: #f4f4f452;
 }
 
 .arrow-up {
@@ -202,4 +203,12 @@ button:focus {
 
 .hardware, .soft {
   display: none; 
+}
+
+.hardware{
+  display: block;
+}
+
+.soft{
+  display: none;
 }
