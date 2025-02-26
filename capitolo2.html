@@ -54,7 +54,7 @@
           sistema.”
         </h3>
         <div class="container1">
-          <h2 id="Schede"><mark>1. Schede di espansione (componenti interne) :</mark></h2>
+          <h2 id="Schede"><mark>1.1 Schede di espansione (componenti interne) :</mark></h2>
           <p>
             Le schede di espansione sono componenti interne del computer che si inseriscono nella scheda madre per
             aggiungere nuove funzionalità o migliorare quelle esistenti. Questi componenti sono fondamentali per
@@ -97,7 +97,7 @@
             </li>
           </ul>
 
-          <h2 id="periferiche"><mark>2. Periferiche (dispositivi esterni) :</mark></h2>
+          <h2 id="periferiche"><mark>1.2 Periferiche :</mark></h2>
           <p>
             Le periferiche sono dispositivi esterni che si collegano al computer tramite porte come USB, HDMI, ecc.
             Servono
@@ -113,7 +113,7 @@
           <table ;border="1">
             <thead>
               <tr>
-                <th>Accessorio</th>
+                <th>Dispositivo <mark>O</mark> Periferica</th>
                 <th>Descrizione</th>
               </tr>
             </thead>
@@ -191,17 +191,6 @@
     </div>
 
     <div>
-      <h2><mark>Differenza tra Schede di espansione e Periferiche:</mark></h2>
-      <p>
-        <strong>Schede di espansione:</strong>
-        componenti interni che migliorano il funzionamento del computer. Questi componenti sono installati direttamente
-        sulla scheda madre e non sono visibili dall'esterno.<br>
-        <strong>Periferiche:</strong>
-        dispositivi esterni che si collegano al computer per aggiungere funzioni, come stampare, immagazzinare dati o
-        interagire con il sistema. Le periferiche sono facilmente collegabili e rimovibili, rendendole versatili e
-        adatte a diverse esigenze.
-      </p>
-
       <h2><mark>Riassunto:</mark></h2>
       <p>
         <strong>Schede di espansione:</strong>
@@ -247,15 +236,16 @@
       });
 
       function toggleSection(section) {
+
         const hardware = document.querySelector('.hardware');
         const soft = document.querySelector('.soft');
 
         if (section === 'hardware') {
-          hardware.classList.add('active');
-          soft.classList.remove('active');
-        } else if (section === 'soft') {
-          soft.classList.add('active');
-          hardware.classList.remove('active');
+          hardware.style.display = 'block';
+          soft.style.display = 'none';
+        } else {
+          hardware.style.display = 'none';
+          soft.style.display = 'block';
         }
       }
 
