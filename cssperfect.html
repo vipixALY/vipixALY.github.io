@@ -25,27 +25,40 @@
     <style>
         :root {
             --background-light: #000000;
-            --background-dark: #121212;
-            --text-light: #ffffff;
-            --text-dark: #fff;
+            --background-dark: #000000;
+            --text-light: #000000;
+            --text-dark: #000000;
             --neon-color: #00fffc;
             --card-background-light: #f0f0f0;
             --card-background-dark: #ffffff;
         }
 
         @keyframes backgroundAnimation {
-            0% {
-                background-color: #000000;
+            10% {
+                background: linear-gradient(45deg, #000000, #FF5733);
             }
 
-            50% {
-                background-color: #121212;
+            20% {
+                background: linear-gradient(45deg, #000000);
+            }
+
+            40% {
+                background: linear-gradient(45deg, #000000);
+            }
+
+            60% {
+                background: linear-gradient(45deg, #1E90FF, #FF1493);
+            }
+
+            80% {
+                background: linear-gradient(45deg, #000000);
             }
 
             100% {
-                background-color: #000000;
+                background: linear-gradient(45deg, #000000);
             }
         }
+
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -171,6 +184,19 @@
             width: 320px;
             height: 384px;
             cursor: pointer;
+            animation: card-entry 1s ease-out forwards;
+        }
+
+        @keyframes card-entry {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .card-inner {
@@ -222,7 +248,7 @@
             font-size: 0.875rem;
         }
 
-        name {
+        .name {
             font-size: 1rem;
             color: white;
         }
