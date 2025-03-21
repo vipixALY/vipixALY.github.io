@@ -1,96 +1,157 @@
 <style>
     body {
-        background-color: lightblue;
+        margin: 20px;
+        background-color: white;
     }
 
-    .forest {
-        font-size: 35px;
-        line-height: 1px;
-        letter-spacing: -5px;
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 0;
     }
 
-    .recinto.tiger {
-        width: 270px;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
+    ul {
+        list-style-type: disc;
     }
 
-    .road {
-        display: inline-block;
-        height: 4px;
-        background-color: #654321;
-        vertical-align: middle;
-        margin: 0 -5px;
+    ul li {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    #zoo {
+        margin-top: 10px;
+        border-top: solid 95px #49c0db;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    #guardiola {
+        margin-bottom: 20px;
+        text-align: left;
     }
 
     #guardian {
-        font-size: 60px;
+        font-size: 100px;
         display: block;
-        margin: 20px 0;
+        margin-bottom: -15px;
+    }
+
+    #guardiola p {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .forest {
+        display: flex;
+        justify-content: space-between;
+        font-size: 23px;
+        width: 340px;
+        position: relative;
+    }
+
+    .road {
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        background-color: gray;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
     }
 
     .recinto {
-        border: 3px solid #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed black;
         padding: 10px;
-        width: 140px;
-        margin: 15px 0;
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.3);
+        margin: 10px auto;
+        width: 340px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
     }
 
-    .tiger {
-        color: #FF4500;
-    }
-
-    .elephant {
-        color: #808080;
-    }
-
+    .tiger,
+    .elephant,
     .fox {
-        color: #FFA500;
-        width: 91 ;
-    }
-
-    .recinto span {
         font-size: 30px;
-        margin: 0 2px;
+        margin: 5px;
+    }
+    
+    /* Modifiche per ottenere l'aspetto desiderato */
+    .recinto.tiger {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .recinto.elephant {
+        align-items: center;
+    }
+    
+    .recinto.fox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .forest {
+        width: 340px;
+    }
+    
+    .road {
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        background-color: gray;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+    
+    #guardian {
+        font-size: 100px;
+    }
+    
+    #guardiola {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 </style>
 
 <h1>Bevenuto presso lo ZOO della 1F</h1>
 <span>In questo zoo si trovano i seguenti animali</span>
 <ul>
-    <li>5 🐯</li>
-    <li>3 🐘​</li>
-    <li>2 🦊​</li>
+	<li>5 🐯</li>
+	<li>3 🐘​</li>
+	<li>2 🦊​</li>
 </ul>
 <div id="zoo">
-    <div id="guardiola">
-        <span id="guardian">💂</span>
-        <p>Ciao sono il guardiano!<br />I nostri alberi sono alti 35px; la gabbia delle 🐯 è larga circa
-            340px​!!<br />Oggi il cielo è light blue.</p>
-    </div>
-    <div class="forest">🌴​🌳​🌲​<span class="road">​</span>🌲​🌴​🌳​🌲​🌴​🌳​🌲​<span class="road"></span>​🌴​​​
-    </div>
-    <div class="recinto tiger">
-        <span class="tiger uno">🐯</span>
-        <span class="tiger due">🐯</span>
-        <span class="tiger tre">🐯</span>
-        <span class="tiger quattro">🐯</span>
-        <span class="tiger cinque">🐯</span>
-    </div>
-    <div class="forest">🌴​🌳​🌲​<span class="road"></span>🌴​🌳​🌲​🌴​<span class="road"></span>​
-    </div>
-    <div class="recinto elephant">
-        <span class="elephant uno">🐘​</span>
-        <span class="elephant due">🐘​</span>
-        <span class="elephant tre">🐘​</span>
-    </div>
-    <div class="forest">🌴​🌳​🌲​<span class="road"></span>​🌴​​​<span class="road"></span>​
-    </div>
-    <div class="recinto fox">
-        <span class="fox uno">🦊​</span>
-        <span class="fox due">🦊​​</span>
-    </div>
+	<div id="guardiola">
+		<span id="guardian">💂</span>
+		<p>Ciao sono il guardiano!<br />I nostri alberi sono alti 35px; la gabbia delle 🐯 è larga circa 340px​!!<br />Oggi il cielo è light blue.</p>
+	</div>
+	<div class="forest">🌴​🌳​🌲​<span class="road">​</span>🌲​🌴​🌳​🌲​🌴​🌳​🌲​<span class="road"></span>​🌲​🌴​🌳​🌲​</div>
+	<div class="recinto tiger">
+		<span class="tiger uno">🐯</span>
+		<span class="tiger due">🐯</span>
+		<span class="tiger tre">🐯</span>
+		<span class="tiger quattro">🐯</span>
+		<span class="tiger cinque">🐯</span>
+	</div>
+	<div class="forest">🌴​🌳​🌲​<span class="road"></span>🌲​🌴​🌳​🌲​🌴​🌳​🌲​<span class="road"></span>​🌲​🌴​🌳​🌲​</div>
+	<div class="recinto elephant">
+		<span class="elephant uno">🐘​</span>
+		<span class="elephant due">🐘​</span>
+		<span class="elephant tre">🐘​</span>
+	</div>
+	<div class="forest">🌴​🌳​🌲​<span class="road"></span>🌲​🌴​🌳​🌲​🌴​🌳​🌲​<span class="road"></span>​🌲​🌴​🌳​🌲​</div>
+	<div class="recinto fox">
+		<span class="fox uno">🦊​</span>
+		<span class="fox due">🦊​​</span>
+	</div>
 </div>
