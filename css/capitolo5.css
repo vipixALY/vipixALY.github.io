@@ -2,67 +2,43 @@ body {
     background-color: rgb(91, 77, 104);
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 0px;
-
-
-}
-
-.button {
+  }
+  
+  .button {
     text-align: center; 
-    margin-top: 1px; 
-}
-
-.btn {
+    margin-top: 1px;
+  }
+  
+  .btn {
     display: inline-block; 
-    padding: 12px 24px ; 
-    margin: 10px; 
-    background: linear-gradient(45deg, #5a5a5a, #757575); 
+    padding: 12px 24px;
+    margin: 10px;
+    background: linear-gradient(
+      45deg,
+      #5a5a5a,
+      #757575
+    ); 
     color: white; 
     text-decoration: none; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s, box-shadow 0.2s; 
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     color: red;
     transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
-
-}
-
-.btn i {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn i {
     margin-right: 8px; 
-}
-
-.arrow-up {
-    font-size: 50px; 
-    color: #007bff; 
-    cursor: pointer; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-}
-
-.arrow-up:hover {
-    color: #0056b3; 
-}
-
-img{
-    width: 450px;
-    height: 50%;
-    margin: 0 auto;
-
-}
-
-p{
-    text-align: center;
-}
-
-
-#menu-button {
+  }
+  
+  #menu-button {
     position: fixed;
     top: 15px;
-    left:  10px;
+    left: 10px;
     width: 40px;
     height: 40px;
     background-color: #333;
@@ -73,10 +49,10 @@ p{
     line-height: 40px;
     cursor: pointer;
     z-index: 1001;
-}
+  }
+  
 
-
-#navbar {
+  #navbar {
     position: fixed;
     top: 60px;
     left: 10px;
@@ -87,30 +63,64 @@ p{
     flex-direction: column;
     align-items: flex-start;
     z-index: 1000;
-}
-
-#navbar a {
+  }
+  
+  #navbar a {
     color: white;
     text-decoration: none;
     padding: 8px;
     display: block;
     font-size: 16px;
-}
-
-#navbar a:hover {
+  }
+  
+  #navbar a:hover {
     background-color: #555;
-}
-h1{
+  }
+  
+  .image-container {
     text-align: center;
-}
+    margin: 20px 0;
+  }
+  
+  img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  .small-img {
+    width: 50%;
+    max-width: 300px;
+  }
 
-h2{
-    color: red;
+  .medio-img {
+    width: 90%;
+    max-width: 700px;
+  }
+  
+  h1 {
     text-align: center;
-}
-
-h3{
+  }
+  
+  p {
+    text-align: center;
     color: white;
+  }
+  
+  h2 {
     text-align: center;
-
-}
+    color: red;
+  }
+  
+  .arrow-up {
+    font-size: 50px;
+    color: #007bff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .arrow-up:hover {
+    color: #0056b3;
+  }
+  

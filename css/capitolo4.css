@@ -1,0 +1,158 @@
+body {
+  background-color: rgb(91, 77, 104);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0px;
+}
+
+.button {
+  text-align: center;
+  margin-top: 1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  background: linear-gradient(45deg, #5a5a5a, #757575);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  color: red;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+#menu-button {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#navbar {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+  font-size: 16px;
+}
+
+#navbar a:hover {
+  background-color: #555;
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.small-img {
+  width: 50%;
+  max-width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+.arrow-up {
+  font-size: 50px;
+  color: #007bff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.arrow-up:hover {
+  color: #0056b3;
+}
+
+.table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #333;
+  color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%; /* Responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.small-img {
+  width: 50%; /* Adjust width as needed */
+  max-width: 300px; /* Optional max width */
+}
