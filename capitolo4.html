@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/capitolo4.css">
+    <title>Unità 4</title>
+
+</head>
+
+<body>
+
+    <div class="button">
+        <a href="copertina.html" class="btn"><i class="fas fa-home"></i> COPERTINA</a>
+        <a href="#" class="btn"><i class="fas fa-list"></i> INDICE</a>
+        <a href="capitolo1.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 1</a>
+        <a href="capitolo2.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 2</a>
+        <a href="capitolo3.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 3</a>
+        <a href="#" class="btn"><i class="fas fa-book"></i> CAPITOLO 4</a>
+        <a href="capitolo5.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 5</a>
+    </div>
+
+    <div id="menu-button" onclick="toggleNavbar()">☰</div>
+    <div id="navbar">
+        <a href="#introduzione">Introduzione</a>
+        <a href="#windows">Windows</a>
+        <a href="#interfaccia-windows">Interfaccia Windows</a>
+        <a href="#file">File System</a>
+        <a href="#attivita">Gestione Attività</a>
+        <a href="#linux">Linux</a>
+        <a href="#interfaccia-ubuntu">Interfaccia Ubuntu</a>
+        <a href="#confronto">Confronto</a>
+        <a href="#macchina-virtuale">Macchine Virtuali</a>
+        <a href="#programmi-utilita">Programmi Utilità</a>
+    </div>
+
+    <div class="content">
+        <h1><mark>Unità 4: Sistemi Operativi</mark></h1>
+        <div class="image-container">
+            <img src="img/sistemi_operativi.jpg" alt="errore">
+        </div>
+
+        <!-- Introduzione ai sistemi operativi -->
+        <h2 id="introduzione">1. Introduzione ai sistemi operativi</h2>
+        <div class="image-container">
+            <img src="img/Introduzione.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Il sistema operativo (OS) è il software fondamentale che agisce da intermediario tra l'hardware del computer
+            e l'utente. Senza un sistema operativo, un computer non sarebbe in grado di eseguire applicazioni o gestire
+            risorse come memoria, CPU e dispositivi di input/output. I sistemi operativi moderni sono progettati per
+            essere intuitivi e facili da usare, ma dietro le quinte svolgono compiti complessi per garantire che tutto
+            funzioni senza intoppi.</p>
+        <div class="sub-section">
+            <h3>1.1 Funzioni principali</h3>
+            <ul>
+                <li><strong>Gestione della memoria</strong>: Alloca e libera memoria RAM, gestisce la memoria virtuale e
+                    previene conflitti tra processi. La memoria virtuale consente al sistema di utilizzare spazio su
+                    disco come estensione della RAM, migliorando le prestazioni.</li>
+                <li><strong>Gestione dei processi</strong>: Pianifica l'esecuzione dei programmi, gestisce il
+                    multitasking e assegna risorse della CPU. Il sistema operativo utilizza algoritmi di scheduling per
+                    decidere quale processo deve essere eseguito e per quanto tempo.</li>
+                <li><strong>Gestione dei file</strong>: Organizza i dati in file e directory, gestisce permessi e
+                    operazioni di lettura/scrittura. I file system moderni supportano funzionalità avanzate come la
+                    crittografia e la compressione dei dati.</li>
+                <li><strong>Gestione delle periferiche</strong>: Controlla dispositivi hardware tramite driver e
+                    gestisce input/output. I driver sono software specializzati che consentono al sistema operativo di
+                    comunicare con dispositivi specifici come stampanti, schede grafiche e dispositivi di archiviazione.
+                </li>
+                <li><strong>Sicurezza</strong>: Protegge il sistema da accessi non autorizzati e malware. I moderni
+                    sistemi operativi includono firewall integrati, crittografia dei dati e funzionalità di rilevamento
+                    delle intrusioni.</li>
+            </ul>
+            <h3>1.2 Tipi di sistemi operativi</h3>
+            <ul>
+                <li><strong>Desktop OS</strong>: Windows, macOS, Linux (per utenti finali). Questi sistemi operativi
+                    sono progettati per essere facili da usare e supportano una vasta gamma di applicazioni.</li>
+                <li><strong>Server OS</strong>: Windows Server, Linux Server (per gestione reti e servizi). I sistemi
+                    operativi server sono ottimizzati per gestire carichi di lavoro pesanti e supportano funzionalità
+                    come la virtualizzazione e il bilanciamento del carico.</li>
+                <li><strong>Mobile OS</strong>: Android, iOS (per smartphone e tablet). Questi sistemi operativi sono
+                    progettati per dispositivi con risorse limitate e supportano applicazioni mobili e funzionalità
+                    touch.</li>
+                <li><strong>Real-Time OS</strong>: Utilizzati in sistemi embedded (es. automazione industriale). Questi
+                    sistemi operativi sono progettati per eseguire compiti in tempo reale con precisione
+                    millisecondaria.</li>
+            </ul>
+        </div>
+
+        <!-- Microsoft Windows -->
+        <h2 id="windows">2. Microsoft Windows</h2>
+        <div class="image-container">
+            <img src="img/win.png" alt="errore" class="medio-img">
+        </div>
+        <p>Windows è il sistema operativo più diffuso al mondo, con una quota di mercato superiore al 75% sui PC
+            desktop. La sua popolarità è dovuta alla facilità d'uso, alla vasta compatibilità hardware/software e al
+            supporto continuo da parte di Microsoft. Windows è utilizzato in una varietà di ambienti, dalle case agli
+            uffici, dalle scuole alle grandi aziende.</p>
+        <div class="sub-section">
+            <h3>2.1 Storia e versioni principali</h3>
+            <ul>
+                <li><strong>Windows 95</strong>: Introdusse il menu Start e il concetto di plug-and-play. Questa
+                    versione rivoluzionò l'uso dei PC, rendendoli accessibili a un pubblico più ampio.</li>
+                <li><strong>Windows XP</strong>: Stabilità e interfaccia user-friendly (2001-2014). Windows XP è stato
+                    uno dei sistemi operativi più longevi e amati di sempre.</li>
+                <li><strong>Windows 7</strong>: Miglioramenti prestazionali e sicurezza (2009). Windows 7 è stato
+                    acclamato per la sua stabilità e facilità d'uso.</li>
+                <li><strong>Windows 10</strong>: Integrazione con cloud e aggiornamenti continui (2015). Windows 10 ha
+                    introdotto funzionalità come Cortana e il Microsoft Store.</li>
+                <li><strong>Windows 11</strong>: Interfaccia modernizzata e supporto per app Android (2021). Windows 11
+                    offre un design più moderno e miglioramenti nelle prestazioni.</li>
+            </ul>
+            <h3>2.2 Architettura</h3>
+            <p>Basato su kernel ibrido (monolitico e microkernel), supporta:</p>
+            <ul>
+                <li>File system NTFS, exFAT, FAT32. NTFS offre funzionalità avanzate come la crittografia e i permessi
+                    di file.</li>
+                <li>API Win32 e .NET Framework. Queste API consentono agli sviluppatori di creare applicazioni potenti e
+                    integrate.</li>
+                <li>Virtualizzazione tramite Hyper-V. Hyper-V consente di eseguire più sistemi operativi su un singolo
+                    hardware.</li>
+            </ul>
+        </div>
+
+        <!-- L'interfaccia utente di Windows 10 -->
+        <h2 id="interfaccia-windows">3. L'interfaccia utente di Windows 10</h2>
+        <div class="image-container">
+            <img src="img/win10.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Windows 10 combina elementi tradizionali con funzionalità moderne, offrendo un'esperienza utente versatile.
+            L'interfaccia è progettata per essere intuitiva e personalizzabile, consentendo agli utenti di adattarla
+            alle proprie esigenze.</p>
+        <div class="sub-section">
+            <h3>3.1 Componenti chiave</h3>
+            <ul>
+                <li><strong>Start Menu</strong>: Accesso a programmi, file recenti e ricerca globale. Il menu Start è
+                    stato riprogettato per essere più funzionale e personalizzabile.</li>
+                <li><strong>Taskbar</strong>: Collegamenti rapidi, anteprime applicazioni e notifiche. La taskbar è uno
+                    strumento essenziale per la navigazione e la gestione delle applicazioni.</li>
+                <li><strong>Action Center</strong>: Notifiche e impostazioni rapide (Wi-Fi, Bluetooth, modalità notte).
+                    L'Action Center è un hub centrale per le notifiche e le impostazioni rapide.</li>
+                <li><strong>Virtual Desktops</strong>: Creazione di più desktop per organizzare il lavoro. I desktop
+                    virtuali consentono di separare le attività in spazi di lavoro distinti.</li>
+            </ul>
+            <h3>3.2 Personalizzazione avanzata</h3>
+            <ul>
+                <li><strong>Temi</strong>: Cambio colori, sfondi e suoni. I temi consentono di personalizzare l'aspetto
+                    del sistema operativo.</li>
+                <li><strong>Impostazioni avanzate</strong>: Regolazione risoluzione schermo, gestione dispositivi,
+                    opzioni di alimentazione. Le impostazioni avanzate offrono un controllo completo sul sistema.</li>
+                <li><strong>Cortana</strong>: Assistente vocale integrato per ricerche e comandi vocali. Cortana può
+                    aiutare a trovare file, impostare promemoria e molto altro.</li>
+            </ul>
+        </div>
+
+        <!-- I file e il file system -->
+        <h2 id="file">4. I file e il file system</h2>
+        <div class="image-container">
+            <img src="img/i file s..png" alt="errore" class="small-img">
+        </div>
+        <p>I file sono l'unità base di archiviazione dei dati, organizzati in directory (cartelle) e gestiti dal file
+            system. Il file system è responsabile dell'organizzazione, dell'archiviazione e del recupero dei dati su
+            dispositivi di archiviazione come dischi rigidi e SSD.</p>
+        <div class="sub-section">
+            <h3>4.1 Struttura dei file</h3>
+            <ul>
+                <li><strong>Nome ed estensione</strong>: Esempio: documento.docx (.docx indica un file Word).</li>
+                <li><strong>Percorsi</strong>: Esempio: C:\Utenti\NomeUtente\Documenti\file.txt.</li>
+                <li><strong>Attributi</strong>: Sola lettura, nascosto, sistema.</li>
+            </ul>
+            <h3>4.2 Operazioni comuni</h3>
+            <ul>
+                <li><strong>Copia/Sposta</strong>: CTRL+C / CTRL+V o drag-and-drop.</li>
+                <li><strong>Compressione</strong>: Creazione file ZIP per risparmiare spazio.</li>
+                <li><strong>Ricerca</strong>: Utilizzo della barra di ricerca in Esplora File.</li>
+            </ul>
+        </div>
+
+        <!-- Gestione delle attività -->
+        <h2 id="attivita">5. Gestione delle attività</h2>
+        <div class="image-container">
+            <img src="img/attivita.png" alt="errore" class="small-img">
+        </div>
+        <p>Il Task Manager è uno strumento essenziale per monitorare e gestire le risorse del sistema. Consente agli
+            utenti di visualizzare i processi in esecuzione, monitorare l'utilizzo delle risorse e terminare i processi
+            non rispondenti.</p>
+        <div class="sub-section">
+            <h3>5.1 Funzionalità principali</h3>
+            <ul>
+                <li><strong>Processi</strong>: Visualizza CPU, memoria, disco e utilizzo rete per ogni applicazione.
+                </li>
+                <li><strong>Prestazioni</strong>: Grafici in tempo reale per CPU, RAM, disco e GPU.</li>
+                <li><strong>Avvio</strong>: Gestione programmi che partono all'avvio del sistema.</li>
+            </ul>
+            <h3>5.2 Ottimizzazione</h3>
+            <ul>
+                <li>Chiusura programmi non rispondenti.</li>
+                <li>Identificazione processi ad alto utilizzo di risorse.</li>
+                <li>Disabilitazione programmi superflui all'avvio.</li>
+            </ul>
+        </div>
+
+        <!-- Linux e l'open source -->
+        <h2 id="linux">6. Linux e l'open source</h2>
+        <div class="image-container">
+            <img src="img/linux.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Linux è un sistema operativo basato su kernel open source, ampiamente utilizzato in server, supercomputer e
+            dispositivi IoT. La sua flessibilità e sicurezza lo rendono una scelta popolare per sviluppatori e
+            amministratori di sistema.</p>
+        <div class="sub-section">
+            <h3>6.1 Caratteristiche principali</h3>
+            <ul>
+                <li><strong>Licenza GPL</strong>: Codice sorgente liberamente modificabile e distribuibile.</li>
+                <li><strong>Terminale</strong>: Potente interfaccia a riga di comando (CLI).</li>
+                <li><strong>Package manager</strong>: Strumenti come APT (Debian/Ubuntu) o YUM (Fedora) per installare
+                    software.</li>
+            </ul>
+            <h3>6.2 Distribuzioni popolari</h3>
+            <ul>
+                <li><strong>Ubuntu</strong>: Ideale per principianti, ampia comunità.</li>
+                <li><strong>Fedora</strong>: Innovativo, sponsorizzato da Red Hat.</li>
+                <li><strong>Debian</strong>: Stabile, base per molte distribuzioni.</li>
+            </ul>
+        </div>
+
+        <!-- L'interfaccia utente di Ubuntu -->
+        <h2 id="interfaccia-ubuntu">7. L'interfaccia utente di Ubuntu</h2>
+        <div class="image-container">
+            <img src="img/7.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Ubuntu utilizza l'ambiente desktop GNOME, noto per la sua semplicità e modernità. L'interfaccia è progettata
+            per essere intuitiva e facile da usare, con un focus sulla produttività.</p>
+        <div class="sub-section">
+            <h3>7.1 Componenti principali</h3>
+            <ul>
+                <li><strong>Dash</strong>: Barra laterale per lanciare applicazioni.</li>
+                <li><strong>Workspaces</strong>: Creazione di più aree di lavoro per organizzare le finestre.</li>
+                <li><strong>Software Center</strong>: Installazione di applicazioni da repository ufficiali.</li>
+            </ul>
+            <h3>7.2 Personalizzazione</h3>
+            <ul>
+                <li>Installazione temi e icone tramite GNOME Tweaks.</li>
+                <li>Creazione di shortcut personalizzati.</li>
+                <li>Gestione estensioni per aggiungere funzionalità.</li>
+            </ul>
+        </div>
+
+        <!-- Confronto tra Windows e Linux -->
+        <h2 id="confronto">8. Confronto tra Windows e Linux</h2>
+        <div class="image-container">
+            <img src="img/1vs2.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Ecco un confronto dettagliato tra i due sistemi operativi:</p>
+        <table class="table">
+            <tr>
+                <th>Criterio</th>
+                <th>Windows</th>
+                <th>Linux</th>
+            </tr>
+            <tr>
+                <td>Costo</td>
+                <td>Licenza a pagamento (tranne Windows 10/11 in modalità S)</td>
+                <td>Completamente gratuito</td>
+            </tr>
+            <tr>
+                <td>Sicurezza</td>
+                <td>Maggiore esposizione a malware</td>
+                <td>Architettura più sicura, meno vulnerabile</td>
+            </tr>
+            <tr>
+                <td>Customizzazione</td>
+                <td>Limitata</td>
+                <td>Illimitata (kernel modificabile)</td>
+            </tr>
+            <tr>
+                <td>Supporto hardware</td>
+                <td>Ottimale (driver per quasi tutti i dispositivi)</td>
+                <td>Variabile (dipende dalla distribuzione)</td>
+            </tr>
+            <tr>
+                <td>Software disponibile</td>
+                <td>Vasta gamma di applicazioni commerciali</td>
+                <td>Open source e software libero</td>
+            </tr>
+        </table>
+
+        <!-- Macchine virtuali -->
+        <h2 id="macchina-virtuale">9. Macchine virtuali</h2>
+        <div class="image-container">
+            <img src="img/vm.jpg" alt="errore" class="small-img">
+        </div>
+        <p>Le macchine virtuali (VM) permettono di eseguire più sistemi operativi su un singolo hardware. Sono
+            utilizzate per scopi di testing, sviluppo e isolamento delle applicazioni.</p>
+        <div class="sub-section">
+            <h3>9.1 Vantaggi</h3>
+            <ul>
+                <li>Isolamento: Ogni VM è indipendente dalle altre.</li>
+                <li>Flessibilità: Esecuzione di OS diversi (es. Windows su Linux).</li>
+                <li>Backup: Facile creazione di snapshot per ripristino.</li>
+            </ul>
+            <h3>9.2 Software popolari</h3>
+            <ul>
+                <li><strong>VirtualBox</strong>: Gratuito e open source.</li>
+                <li><strong>VMware Workstation</strong>: Professionale, a pagamento.</li>
+                <li><strong>Hyper-V</strong>: Integrato in Windows Pro/Enterprise.</li>
+            </ul>
+        </div>
+
+        <!-- Programmi di utilità -->
+        <h2 id="programmi-utilita">10. Programmi di utilità</h2>
+        <div class="image-container">
+            <img src="img/10.png" alt="errore" class="small-img">
+        </div>
+        <p>I plugin sono strumenti essenziali per mantenere il tuo sistema efficiente e sicuro. Questi strumenti aiutano a gestire le risorse, migliorare le prestazioni e proteggere i dati.</p>
+        <div class="sub-section">
+            <h3>10.1 Strumenti di sistema</h3>
+            <ul>
+                <li><strong>Deframmentazione disco</strong>: Ottimizza l'archiviazione su HDD.</li>
+                <li><strong>Pulizia disco</strong>: Rimuove file temporanei e non necessari.</li>
+                <li><strong>Backup e ripristino</strong>: Crea copie di sicurezza dei dati.</li>
+            </ul>
+            <h3>10.2 Utility third-party</h3>
+            <ul>
+                <li><strong>Antivirus</strong>: Protezione da malware (es. Avast, Norton).</li>
+                <li><strong>Ottimizzazione</strong>: Migliora prestazioni (es. CCleaner).</li>
+                <li><strong>Recupero dati</strong>: Ripristina file cancellati (es. Recuva).</li>
+            </ul>
+        </div>
+
+        <!-- Conclusioni -->
+        <div class="summary">
+            <h3>Conclusioni</h3>
+            <p>I sistemi operativi sono il cuore di ogni computer, e la scelta tra Windows, Linux o altri dipende dalle
+                esigenze specifiche. Windows offre facilità d'uso e compatibilità, mentre Linux garantisce controllo e
+                sicurezza. Strumenti come le macchine virtuali e i programmi di utilità estendono le possibilità
+                operative, rendendo i sistemi operativi strumenti potenti e versatili per ogni tipo di utente.</p>
+        </div>
+    </div>
+
+    <div class="arrow-up" onclick="scrollToTop()">↑</div>
+
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById("navbar");
+            navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
