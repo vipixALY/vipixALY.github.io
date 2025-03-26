@@ -1,0 +1,82 @@
+<style>
+.cielo {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background-color: skyblue;
+}
+
+
+.prato {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background-color: green;
+    bottom: 0;
+}
+
+
+.sole {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    top: 50px;
+    right: 50px;
+}
+
+
+.nuvola {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(0% 50%, 20% 30%, 40% 50%, 60% 30%, 80% 50%, 100% 30%, 100% 70%, 80% 90%, 60% 70%, 40% 90%, 20% 70%, 0% 90%);
+}
+
+
+.tronco {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background-color: brown;
+    bottom: 30%;
+    left: 15%;
+}
+
+
+.chioma {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    bottom: calc(30% + 50px);
+    left: 14%;
+}
+
+
+.mela {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+
+.mela1 { top: calc(65% - 65px); left: 15%; }
+.mela2 { top: calc(70% - 70px); left: 15%; }
+.mela3 { top: calc(67% - 67px); left: 17%; }
+
+</style>
+<div class="cielo"></div>
+<div class="prato"></div>
+<div class="sole"></div>
+<div class="nuvola"></div>
+<div class="tronco"></div>
+<div class="chioma"></div>
+<div class="mela mela1"></div>
+<div class="mela mela2"></div>
+<div class="mela mela3"></div>
