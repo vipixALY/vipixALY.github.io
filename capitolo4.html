@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Capitolo 4 - Algoritmi e Programmazione</title>
     <link rel="stylesheet" href="css/capitolo4.css">
-    <title>Unità 4</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -22,330 +21,371 @@
         <a href="capitolo5.html" class="btn"><i class="fas fa-book"></i> CAPITOLO 5</a>
     </div>
 
-    <div id="menu-button" onclick="toggleNavbar()">☰</div>
+    <div id="menu-button" onclick="toggleMenu()">☰</div>
     <div id="navbar">
-        <a href="#introduzione">Introduzione</a>
-        <a href="#windows">Windows</a>
-        <a href="#interfaccia-windows">Interfaccia Windows</a>
-        <a href="#file">File System</a>
-        <a href="#attivita">Gestione Attività</a>
-        <a href="#linux">Linux</a>
-        <a href="#interfaccia-ubuntu">Interfaccia Ubuntu</a>
-        <a href="#confronto">Confronto</a>
-        <a href="#macchina-virtuale">Macchine Virtuali</a>
-        <a href="#programmi-utilita">Programmi Utilità</a>
+        <a href="#fondamenti"><i class="fas fa-star"></i> Fondamenti</a>
+        <a href="#flowchart"><i class="fas fa-project-diagram"></i> Flow Chart</a>
+        <a href="#pseudocodice"><i class="fas fa-code"></i> Pseudocodice</a>
+        <a href="#strutture-controllo"><i class="fas fa-sitemap"></i> Strutture Controllo</a>
+        <a href="#esercizi"><i class="fas fa-pencil-alt"></i> Esercizi</a>
     </div>
 
-    <div class="content">
-        <h1><mark>Unità 4: Sistemi Operativi</mark></h1>
-        <div class="image-container">
-            <img src="img/sistemi_operativi.jpg" alt="errore">
-        </div>
+    <h1><mark>Capitolo 4 - Algoritmi e Programmazione :</mark></h1>
+    <div class="image-container">
+        <img src="img/Algoritmi.webp" alt="Illustrazione algoritmi" class="medio">
+    </div>
 
-        <!-- Introduzione ai sistemi operativi -->
-        <h2 id="introduzione">1. Introduzione ai sistemi operativi</h2>
-        <div class="image-container">
-            <img src="img/Introduzione.jpg" alt="errore" class="small-img">
-        </div>
-        <p>Il sistema operativo (OS) è il software fondamentale che agisce da intermediario tra l'hardware del computer
-            e l'utente. Senza un sistema operativo, un computer non sarebbe in grado di eseguire applicazioni o gestire
-            risorse come memoria, CPU e dispositivi di input/output. I sistemi operativi moderni sono progettati per
-            essere intuitivi e facili da usare, ma dietro le quinte svolgono compiti complessi per garantire che tutto
-            funzioni senza intoppi.</p>
-        <div class="sub-section">
-            <h3>1.1 Funzioni principali</h3>
-            <ul>
-                <li><strong>Gestione della memoria</strong>: Alloca e libera memoria RAM, gestisce la memoria virtuale e
-                    previene conflitti tra processi. La memoria virtuale consente al sistema di utilizzare spazio su
-                    disco come estensione della RAM, migliorando le prestazioni.</li>
-                <li><strong>Gestione dei processi</strong>: Pianifica l'esecuzione dei programmi, gestisce il
-                    multitasking e assegna risorse della CPU. Il sistema operativo utilizza algoritmi di scheduling per
-                    decidere quale processo deve essere eseguito e per quanto tempo.</li>
-                <li><strong>Gestione dei file</strong>: Organizza i dati in file e directory, gestisce permessi e
-                    operazioni di lettura/scrittura. I file system moderni supportano funzionalità avanzate come la
-                    crittografia e la compressione dei dati.</li>
-                <li><strong>Gestione delle periferiche</strong>: Controlla dispositivi hardware tramite driver e
-                    gestisce input/output. I driver sono software specializzati che consentono al sistema operativo di
-                    comunicare con dispositivi specifici come stampanti, schede grafiche e dispositivi di archiviazione.
-                </li>
-                <li><strong>Sicurezza</strong>: Protegge il sistema da accessi non autorizzati e malware. I moderni
-                    sistemi operativi includono firewall integrati, crittografia dei dati e funzionalità di rilevamento
-                    delle intrusioni.</li>
-            </ul>
-            <h3>1.2 Tipi di sistemi operativi</h3>
-            <ul>
-                <li><strong>Desktop OS</strong>: Windows, macOS, Linux (per utenti finali). Questi sistemi operativi
-                    sono progettati per essere facili da usare e supportano una vasta gamma di applicazioni.</li>
-                <li><strong>Server OS</strong>: Windows Server, Linux Server (per gestione reti e servizi). I sistemi
-                    operativi server sono ottimizzati per gestire carichi di lavoro pesanti e supportano funzionalità
-                    come la virtualizzazione e il bilanciamento del carico.</li>
-                <li><strong>Mobile OS</strong>: Android, iOS (per smartphone e tablet). Questi sistemi operativi sono
-                    progettati per dispositivi con risorse limitate e supportano applicazioni mobili e funzionalità
-                    touch.</li>
-                <li><strong>Real-Time OS</strong>: Utilizzati in sistemi embedded (es. automazione industriale). Questi
-                    sistemi operativi sono progettati per eseguire compiti in tempo reale con precisione
-                    millisecondaria.</li>
-            </ul>
-        </div>
+    <div class="section" id="fondamenti">
+        <h2>4.1 Fondamenti degli Algoritmi</h2>
+        <p>Un algoritmo è una procedura step-by-step per risolvere problemi con queste caratteristiche:</p>
+        <ul>
+            <li><strong>Input:</strong> Dati in ingresso (0 o più valori)</li>
+            <li><strong>Elaborazione:</strong> Passi di trasformazione ben definiti</li>
+            <li><strong>Output:</strong> Risultato finale (1 o più valori)</li>
+            <li><strong>Deterministico:</strong> Stessi input producono sempre stessi output</li>
+            <li><strong>Finito:</strong> Termina dopo un numero finito di passi</li>
+        </ul>
 
-        <!-- Microsoft Windows -->
-        <h2 id="windows">2. Microsoft Windows</h2>
-        <div class="image-container">
-            <img src="img/win.png" alt="errore" class="medio-img">
-        </div>
-        <p>Windows è il sistema operativo più diffuso al mondo, con una quota di mercato superiore al 75% sui PC
-            desktop. La sua popolarità è dovuta alla facilità d'uso, alla vasta compatibilità hardware/software e al
-            supporto continuo da parte di Microsoft. Windows è utilizzato in una varietà di ambienti, dalle case agli
-            uffici, dalle scuole alle grandi aziende.</p>
-        <div class="sub-section">
-            <h3>2.1 Storia e versioni principali</h3>
-            <ul>
-                <li><strong>Windows 95</strong>: Introdusse il menu Start e il concetto di plug-and-play. Questa
-                    versione rivoluzionò l'uso dei PC, rendendoli accessibili a un pubblico più ampio.</li>
-                <li><strong>Windows XP</strong>: Stabilità e interfaccia user-friendly (2001-2014). Windows XP è stato
-                    uno dei sistemi operativi più longevi e amati di sempre.</li>
-                <li><strong>Windows 7</strong>: Miglioramenti prestazionali e sicurezza (2009). Windows 7 è stato
-                    acclamato per la sua stabilità e facilità d'uso.</li>
-                <li><strong>Windows 10</strong>: Integrazione con cloud e aggiornamenti continui (2015). Windows 10 ha
-                    introdotto funzionalità come Cortana e il Microsoft Store.</li>
-                <li><strong>Windows 11</strong>: Interfaccia modernizzata e supporto per app Android (2021). Windows 11
-                    offre un design più moderno e miglioramenti nelle prestazioni.</li>
-            </ul>
-            <h3>2.2 Architettura</h3>
-            <p>Basato su kernel ibrido (monolitico e microkernel), supporta:</p>
-            <ul>
-                <li>File system NTFS, exFAT, FAT32. NTFS offre funzionalità avanzate come la crittografia e i permessi
-                    di file.</li>
-                <li>API Win32 e .NET Framework. Queste API consentono agli sviluppatori di creare applicazioni potenti e
-                    integrate.</li>
-                <li>Virtualizzazione tramite Hyper-V. Hyper-V consente di eseguire più sistemi operativi su un singolo
-                    hardware.</li>
-            </ul>
-        </div>
+        <div class="flowchart">
+            <h3>Esempio: Algoritmo Media Numeri</h3>
+            <div style="text-align: center;">
+                <div class="symbol oval">Inizio</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Leggi N numeri</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Calcola somma</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Dividi per N</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Stampa media</div>
+                <div class="arrow">↓</div>
+                <div class="symbol oval">Fine</div>
+            </div>
 
-        <!-- L'interfaccia utente di Windows 10 -->
-        <h2 id="interfaccia-windows">3. L'interfaccia utente di Windows 10</h2>
-        <div class="image-container">
-            <img src="img/win10.jpg" alt="errore" class="small-img">
+            <h4 style="text-align: center; margin-top: 20px;">Pseudocodice corrispondente</h4>
+            <pre>
+Algorithm CalcolaMedia
+Begin
+    Input N  // Numero di valori
+    somma ← 0
+    
+    FOR i FROM 1 TO N DO
+        Input numero
+        somma ← somma + numero
+    ENDFOR
+    
+    media ← somma / N
+    Output media
+End</pre>
         </div>
-        <p>Windows 10 combina elementi tradizionali con funzionalità moderne, offrendo un'esperienza utente versatile.
-            L'interfaccia è progettata per essere intuitiva e personalizzabile, consentendo agli utenti di adattarla
-            alle proprie esigenze.</p>
-        <div class="sub-section">
-            <h3>3.1 Componenti chiave</h3>
-            <ul>
-                <li><strong>Start Menu</strong>: Accesso a programmi, file recenti e ricerca globale. Il menu Start è
-                    stato riprogettato per essere più funzionale e personalizzabile.</li>
-                <li><strong>Taskbar</strong>: Collegamenti rapidi, anteprime applicazioni e notifiche. La taskbar è uno
-                    strumento essenziale per la navigazione e la gestione delle applicazioni.</li>
-                <li><strong>Action Center</strong>: Notifiche e impostazioni rapide (Wi-Fi, Bluetooth, modalità notte).
-                    L'Action Center è un hub centrale per le notifiche e le impostazioni rapide.</li>
-                <li><strong>Virtual Desktops</strong>: Creazione di più desktop per organizzare il lavoro. I desktop
-                    virtuali consentono di separare le attività in spazi di lavoro distinti.</li>
-            </ul>
-            <h3>3.2 Personalizzazione avanzata</h3>
-            <ul>
-                <li><strong>Temi</strong>: Cambio colori, sfondi e suoni. I temi consentono di personalizzare l'aspetto
-                    del sistema operativo.</li>
-                <li><strong>Impostazioni avanzate</strong>: Regolazione risoluzione schermo, gestione dispositivi,
-                    opzioni di alimentazione. Le impostazioni avanzate offrono un controllo completo sul sistema.</li>
-                <li><strong>Cortana</strong>: Assistente vocale integrato per ricerche e comandi vocali. Cortana può
-                    aiutare a trovare file, impostare promemoria e molto altro.</li>
-            </ul>
-        </div>
+    </div>
 
-        <!-- I file e il file system -->
-        <h2 id="file">4. I file e il file system</h2>
-        <div class="image-container">
-            <img src="img/i file s..png" alt="errore" class="small-img">
-        </div>
-        <p>I file sono l'unità base di archiviazione dei dati, organizzati in directory (cartelle) e gestiti dal file
-            system. Il file system è responsabile dell'organizzazione, dell'archiviazione e del recupero dei dati su
-            dispositivi di archiviazione come dischi rigidi e SSD.</p>
-        <div class="sub-section">
-            <h3>4.1 Struttura dei file</h3>
-            <ul>
-                <li><strong>Nome ed estensione</strong>: Esempio: documento.docx (.docx indica un file Word).</li>
-                <li><strong>Percorsi</strong>: Esempio: C:\Utenti\NomeUtente\Documenti\file.txt.</li>
-                <li><strong>Attributi</strong>: Sola lettura, nascosto, sistema.</li>
-            </ul>
-            <h3>4.2 Operazioni comuni</h3>
-            <ul>
-                <li><strong>Copia/Sposta</strong>: CTRL+C / CTRL+V o drag-and-drop.</li>
-                <li><strong>Compressione</strong>: Creazione file ZIP per risparmiare spazio.</li>
-                <li><strong>Ricerca</strong>: Utilizzo della barra di ricerca in Esplora File.</li>
-            </ul>
-        </div>
+    <div class="section" id="flowchart">
+        <h2>4.2 Flow Chart (Diagrammi di Flusso)</h2>
+        <p>Simboli standard per rappresentare algoritmi:</p>
 
-        <!-- Gestione delle attività -->
-        <h2 id="attivita">5. Gestione delle attività</h2>
-        <div class="image-container">
-            <img src="img/attivita.png" alt="errore" class="small-img">
-        </div>
-        <p>Il Task Manager è uno strumento essenziale per monitorare e gestire le risorse del sistema. Consente agli
-            utenti di visualizzare i processi in esecuzione, monitorare l'utilizzo delle risorse e terminare i processi
-            non rispondenti.</p>
-        <div class="sub-section">
-            <h3>5.1 Funzionalità principali</h3>
-            <ul>
-                <li><strong>Processi</strong>: Visualizza CPU, memoria, disco e utilizzo rete per ogni applicazione.
-                </li>
-                <li><strong>Prestazioni</strong>: Grafici in tempo reale per CPU, RAM, disco e GPU.</li>
-                <li><strong>Avvio</strong>: Gestione programmi che partono all'avvio del sistema.</li>
-            </ul>
-            <h3>5.2 Ottimizzazione</h3>
-            <ul>
-                <li>Chiusura programmi non rispondenti.</li>
-                <li>Identificazione processi ad alto utilizzo di risorse.</li>
-                <li>Disabilitazione programmi superflui all'avvio.</li>
-            </ul>
-        </div>
-
-        <!-- Linux e l'open source -->
-        <h2 id="linux">6. Linux e l'open source</h2>
-        <div class="image-container">
-            <img src="img/linux.jpg" alt="errore" class="small-img">
-        </div>
-        <p>Linux è un sistema operativo basato su kernel open source, ampiamente utilizzato in server, supercomputer e
-            dispositivi IoT. La sua flessibilità e sicurezza lo rendono una scelta popolare per sviluppatori e
-            amministratori di sistema.</p>
-        <div class="sub-section">
-            <h3>6.1 Caratteristiche principali</h3>
-            <ul>
-                <li><strong>Licenza GPL</strong>: Codice sorgente liberamente modificabile e distribuibile.</li>
-                <li><strong>Terminale</strong>: Potente interfaccia a riga di comando (CLI).</li>
-                <li><strong>Package manager</strong>: Strumenti come APT (Debian/Ubuntu) o YUM (Fedora) per installare
-                    software.</li>
-            </ul>
-            <h3>6.2 Distribuzioni popolari</h3>
-            <ul>
-                <li><strong>Ubuntu</strong>: Ideale per principianti, ampia comunità.</li>
-                <li><strong>Fedora</strong>: Innovativo, sponsorizzato da Red Hat.</li>
-                <li><strong>Debian</strong>: Stabile, base per molte distribuzioni.</li>
-            </ul>
-        </div>
-
-        <!-- L'interfaccia utente di Ubuntu -->
-        <h2 id="interfaccia-ubuntu">7. L'interfaccia utente di Ubuntu</h2>
-        <div class="image-container">
-            <img src="img/7.jpg" alt="errore" class="small-img">
-        </div>
-        <p>Ubuntu utilizza l'ambiente desktop GNOME, noto per la sua semplicità e modernità. L'interfaccia è progettata
-            per essere intuitiva e facile da usare, con un focus sulla produttività.</p>
-        <div class="sub-section">
-            <h3>7.1 Componenti principali</h3>
-            <ul>
-                <li><strong>Dash</strong>: Barra laterale per lanciare applicazioni.</li>
-                <li><strong>Workspaces</strong>: Creazione di più aree di lavoro per organizzare le finestre.</li>
-                <li><strong>Software Center</strong>: Installazione di applicazioni da repository ufficiali.</li>
-            </ul>
-            <h3>7.2 Personalizzazione</h3>
-            <ul>
-                <li>Installazione temi e icone tramite GNOME Tweaks.</li>
-                <li>Creazione di shortcut personalizzati.</li>
-                <li>Gestione estensioni per aggiungere funzionalità.</li>
-            </ul>
-        </div>
-
-        <!-- Confronto tra Windows e Linux -->
-        <h2 id="confronto">8. Confronto tra Windows e Linux</h2>
-        <div class="image-container">
-            <img src="img/1vs2.jpg" alt="errore" class="small-img">
-        </div>
-        <p>Ecco un confronto dettagliato tra i due sistemi operativi:</p>
-        <table class="table">
+        <table>
             <tr>
-                <th>Criterio</th>
-                <th>Windows</th>
-                <th>Linux</th>
+                <th>Simbolo</th>
+                <th>Forma</th>
+                <th>Funzione</th>
+                <th>Esempio</th>
             </tr>
             <tr>
-                <td>Costo</td>
-                <td>Licenza a pagamento (tranne Windows 10/11 in modalità S)</td>
-                <td>Completamente gratuito</td>
+                <td>Terminatore</td>
+                <td>Ovale</td>
+                <td>Inizio e fine del processo</td>
+                <td>Inizio programma, Fine programma</td>
             </tr>
             <tr>
-                <td>Sicurezza</td>
-                <td>Maggiore esposizione a malware</td>
-                <td>Architettura più sicura, meno vulnerabile</td>
+                <td>Processo</td>
+                <td>Rettangolo</td>
+                <td>Operazioni di elaborazione</td>
+                <td>Calcolo somma, Assegnazione variabile</td>
             </tr>
             <tr>
-                <td>Customizzazione</td>
-                <td>Limitata</td>
-                <td>Illimitata (kernel modificabile)</td>
+                <td>Decisione</td>
+                <td>Rombo</td>
+                <td>Punti di scelta (SI/NO)</td>
+                <td>Se numero > 0, Se credito sufficiente</td>
             </tr>
             <tr>
-                <td>Supporto hardware</td>
-                <td>Ottimale (driver per quasi tutti i dispositivi)</td>
-                <td>Variabile (dipende dalla distribuzione)</td>
+                <td>Input/Output</td>
+                <td>Parallelogramma</td>
+                <td>Lettura input o stampa output</td>
+                <td>Leggi numero, Stampa risultato</td>
             </tr>
             <tr>
-                <td>Software disponibile</td>
-                <td>Vasta gamma di applicazioni commerciali</td>
-                <td>Open source e software libero</td>
+                <td>Connessione</td>
+                <td>Cerchio</td>
+                <td>Collegamento tra parti del diagramma</td>
+                <td>Continua a pagina successiva</td>
             </tr>
         </table>
 
-        <!-- Macchine virtuali -->
-        <h2 id="macchina-virtuale">9. Macchine virtuali</h2>
-        <div class="image-container">
-            <img src="img/vm.jpg" alt="errore" class="small-img">
-        </div>
-        <p>Le macchine virtuali (VM) permettono di eseguire più sistemi operativi su un singolo hardware. Sono
-            utilizzate per scopi di testing, sviluppo e isolamento delle applicazioni.</p>
-        <div class="sub-section">
-            <h3>9.1 Vantaggi</h3>
-            <ul>
-                <li>Isolamento: Ogni VM è indipendente dalle altre.</li>
-                <li>Flessibilità: Esecuzione di OS diversi (es. Windows su Linux).</li>
-                <li>Backup: Facile creazione di snapshot per ripristino.</li>
-            </ul>
-            <h3>9.2 Software popolari</h3>
-            <ul>
-                <li><strong>VirtualBox</strong>: Gratuito e open source.</li>
-                <li><strong>VMware Workstation</strong>: Professionale, a pagamento.</li>
-                <li><strong>Hyper-V</strong>: Integrato in Windows Pro/Enterprise.</li>
-            </ul>
-        </div>
-
-        <!-- Programmi di utilità -->
-        <h2 id="programmi-utilita">10. Programmi di utilità</h2>
-        <div class="image-container">
-            <img src="img/10.png" alt="errore" class="small-img">
-        </div>
-        <p>I plugin sono strumenti essenziali per mantenere il tuo sistema efficiente e sicuro. Questi strumenti aiutano a gestire le risorse, migliorare le prestazioni e proteggere i dati.</p>
-        <div class="sub-section">
-            <h3>10.1 Strumenti di sistema</h3>
-            <ul>
-                <li><strong>Deframmentazione disco</strong>: Ottimizza l'archiviazione su HDD.</li>
-                <li><strong>Pulizia disco</strong>: Rimuove file temporanei e non necessari.</li>
-                <li><strong>Backup e ripristino</strong>: Crea copie di sicurezza dei dati.</li>
-            </ul>
-            <h3>10.2 Utility third-party</h3>
-            <ul>
-                <li><strong>Antivirus</strong>: Protezione da malware (es. Avast, Norton).</li>
-                <li><strong>Ottimizzazione</strong>: Migliora prestazioni (es. CCleaner).</li>
-                <li><strong>Recupero dati</strong>: Ripristina file cancellati (es. Recuva).</li>
-            </ul>
-        </div>
-
-        <!-- Conclusioni -->
-        <div class="summary">
-            <h3>Conclusioni</h3>
-            <p>I sistemi operativi sono il cuore di ogni computer, e la scelta tra Windows, Linux o altri dipende dalle
-                esigenze specifiche. Windows offre facilità d'uso e compatibilità, mentre Linux garantisce controllo e
-                sicurezza. Strumenti come le macchine virtuali e i programmi di utilità estendono le possibilità
-                operative, rendendo i sistemi operativi strumenti potenti e versatili per ogni tipo di utente.</p>
+        <div class="flowchart">
+            <h3>Esempio: Controllo Numero Pari/Dispari</h3>
+            <div style="text-align: center;">
+                <div class="symbol oval">Inizio</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Leggi numero</div>
+                <div class="arrow">↓</div>
+                <div class="symbol diamond"><span>Numero % 2 = 0?</span></div>
+                <div style="display: flex; justify-content: space-around; margin-top: 10px;">
+                    <div style="text-align: center; width: 45%;">
+                        <div style="color: green; font-weight: bold;">✔️ Sì</div>
+                        <div class="arrow">↓</div>
+                        <div class="symbol">Stampa "Pari"</div>
+                    </div>
+                    <div style="text-align: center; width: 45%;">
+                        <div style="color: red; font-weight: bold;">❌ No</div>
+                        <div class="arrow">↓</div>
+                        <div class="symbol">Stampa "Dispari"</div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="arrow">↓</div>
+                <div class="symbol oval">Fine</div>
+            </div>
         </div>
     </div>
 
-    <div class="arrow-up" onclick="scrollToTop()">↑</div>
+    <div class="section" id="pseudocodice">
+        <h2>4.3 Pseudocodice</h2>
+        <p>Linguaggio informale per descrivere algoritmi con caratteristiche:</p>
+        <ul>
+            <li>Struttura simile a linguaggi di programmazione reali</li>
+            <li>Indipendente da linguaggi specifici</li>
+            <li>Facile da comprendere e tradurre in codice</li>
+            <li>Combina linguaggio naturale e strutture di controllo</li>
+        </ul>
+
+        <h3>Esempio: Conversione Celsius-Fahrenheit</h3>
+        <pre>
+Algorithm ConversioneTemperatura
+Begin
+    Input gradi_celsius
+    gradi_fahrenheit ← (gradi_celsius × 9/5) + 32
+    Output gradi_fahrenheit
+End</pre>
+
+        <h3>Esempio: Calcolo Fattoriale</h3>
+        <pre>
+Algorithm CalcoloFattoriale
+Begin
+    Input numero
+    fattoriale ← 1
+    
+    // Verifica per numeri negativi
+    IF numero < 0 THEN
+        Output "Errore: numero negativo"
+        Exit
+    ENDIF
+    
+    // Calcolo del fattoriale
+    FOR i FROM 1 TO numero DO
+        fattoriale ← fattoriale × i
+    ENDFOR
+    
+    Output fattoriale
+End</pre>
+    </div>
+
+    <div class="section" id="strutture-controllo">
+        <h2>4.4 Strutture di Controllo</h2>
+
+        <table>
+            <tr>
+                <th>Struttura</th>
+                <th>Flow Chart</th>
+                <th>Pseudocodice</th>
+                <th>Descrizione</th>
+            </tr>
+            <tr>
+                <td>Sequenza</td>
+                <td>Rettangoli collegati linearmente</td>
+                <td>Istruzioni in ordine</td>
+                <td>Esecuzione lineare passo dopo passo</td>
+            </tr>
+            <tr>
+                <td>Selezione</td>
+                <td>Rombo con due uscite (SI/NO)</td>
+                <td>IF...THEN...ELSE</td>
+                <td>Scelta tra due percorsi alternativi</td>
+            </tr>
+            <tr>
+                <td>Iterazione</td>
+                <td>Freccia di ritorno al passo precedente</td>
+                <td>WHILE...DO o FOR...TO</td>
+                <td>Ripetizione di passi fino a condizione</td>
+            </tr>
+        </table>
+
+        <div class="flowchart">
+            <h3>Esempio: Login System</h3>
+            <div style="text-align: center;">
+                <div class="symbol oval">Inizio</div>
+                <div class="arrow">↓</div>
+                <div class="symbol">Inserisci username</div>
+                <div class="arrow">↓</div>
+                <div class="symbol diamond"><span>Username valido?</span></div>
+                <div style="display: flex; justify-content: space-around; margin-top: 10px;">
+                    <div style="text-align: center; width: 48%;">
+                        <div style="color: green; font-weight: bold;">✔️ Sì</div>
+                        <div class="arrow">↓</div>
+                        <div class="symbol">Inserisci password</div>
+                        <div class="arrow">↓</div>
+                        <div class="symbol diamond"><span>Password corretta?</span></div>
+                        <div style="display: flex; justify-content: space-around; margin-top: 10px;">
+                            <div style="text-align: center; width: 48%;">
+                                <div style="color: green; font-weight: bold;">✔️ Sì</div>
+                                <div class="arrow">↓</div>
+                                <div class="symbol">Accesso consentito</div>
+                            </div>
+                            <div style="text-align: center; width: 48%;">
+                                <div style="color: red; font-weight: bold;">❌ No</div>
+                                <div class="arrow">↓</div>
+                                <div class="symbol">Accesso negato</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; width: 48%;">
+                        <div style="color: red; font-weight: bold;">❌ No</div>
+                        <div class="arrow">↓</div>
+                        <div class="symbol">Mostra errore</div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="arrow">↓</div>
+                <div class="symbol oval">Fine</div>
+            </div>
+
+            <h4 style="text-align: center; margin-top: 20px;">Pseudocodice corrispondente</h4>
+            <pre>
+Algorithm SistemaLogin
+Begin
+    Input username
+    
+    IF username è registrato THEN
+        Input password
+        IF password è corretta THEN
+            Output "Accesso consentito"
+        ELSE
+            Output "Accesso negato"
+        ENDIF
+    ELSE
+        Output "Username non valido"
+    ENDIF
+End</pre>
+        </div>
+    </div>
+
+    <div class="section" id="esercizi">
+        <h2>4.5 Esercizi Pratici</h2>
+
+        <div class="exercise">
+            <h3>Esercizio 1: Flow Chart Distributore Bevande</h3>
+            <p>Progetta il flow chart per un distributore automatico che:</p>
+            <ol>
+                <li>Accetta monete da 0.50€, 1€ (massimo 3€)</li>
+                <li>Permette di selezionare una bevanda (1-3) con prezzi diversi</li>
+                <li>Verifica il credito sufficiente</li>
+                <li>Se credito insufficiente, chiede di inserire altre monete</li>
+                <li>Eroga la bevanda e calcola il resto</li>
+                <li>Restituisce le monete se l'utente annulla l'operazione</li>
+            </ol>
+
+            <div class="code-example">
+                <strong>Suggerimento:</strong> Inizia identificando i punti di decisione principali:
+                - Credito sufficiente?
+                - Bevanda valida?
+                - Utente vuole continuare?
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h3>Esercizio 2: Converti in Python</h3>
+            <p>Converti il seguente pseudocodice in codice Python:</p>
+            <pre>
+Algorithm PariDispari
+Begin
+    Input numero
+    IF numero % 2 = 0 THEN
+        Output "Pari"
+    ELSE
+        Output "Dispari"
+    ENDIF
+End</pre>
+
+            <div class="code-example">
+                # Scrivi qui la tua soluzione in Python<br>
+                <br>
+                # Soluzione di esempio:<br>
+                numero = int(input("Inserisci un numero: "))<br>
+                if numero % 2 == 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Il numero è pari")<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Il numero è dispari")<br>
+            </div>
+
+            <h4>Esercizio avanzato:</h4>
+            <p>Modifica il programma per:</p>
+            <ol>
+                <li>Verificare che l'input sia un numero intero</li>
+                <li>Gestire eventuali errori di input</li>
+                <li>Aggiungere un ciclo per permettere all'utente di inserire più numeri</li>
+            </ol>
+        </div>
+
+        <div class="exercise">
+            <h3>Esercizio 3: Calcolatrice Scientifica</h3>
+            <p>Progetta l'algoritmo (pseudocodice e flow chart) per una calcolatrice che:</p>
+            <ol>
+                <li>Chiede all'utente di selezionare un'operazione (+, -, *, /, radice, potenza)</li>
+                <li>Chiede i numeri necessari (1 o 2 a seconda dell'operazione)</li>
+                <li>Esegue il calcolo</li>
+                <li>Mostra il risultato</li>
+                <li>Chiede all'utente se vuole eseguire un altro calcolo</li>
+            </ol>
+
+            <div class="code-example">
+                <strong>Punti chiave:</strong>
+                - Usa una struttura di selezione annidata per gestire le diverse operazioni
+                - Gestisci i casi speciali (divisione per zero, radice di numero negativo)
+                - Usa un ciclo per permettere più operazioni
+            </div>
+        </div>
+    </div>
+
+    <i class="fas fa-arrow-up arrow-up" onclick="scrollToTop()"></i>
 
     <script>
-        function toggleNavbar() {
+
+        function toggleMenu() {
             const navbar = document.getElementById("navbar");
-            navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
+            if (navbar.style.display === "none" || navbar.style.display === "") {
+                navbar.style.display = "flex";
+            } else {
+                navbar.style.display = "none";
+            }
         }
+
+
+        document.addEventListener('click', function (event) {
+            const navbar = document.getElementById("navbar");
+            const menuButton = document.getElementById("menu-button");
+            if (!navbar.contains(event.target) && !menuButton.contains(event.target)) {
+                navbar.style.display = "none";
+            }
+        });
+
+        const links = document.querySelectorAll('#navbar a');
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                const navbar = document.getElementById("navbar");
+                navbar.style.display = "none"; // Nascondi il menu
+            });
+        });
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });

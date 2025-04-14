@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/capitolo5.css">
-    <title>capitolo5</title>
-
+    <title>Capitolo 5 - Le Reti</title>
 </head>
 
 <body>
-
     <div class="button">
         <a href="copertina.html" class="btn"><i class="fas fa-home"></i> COPERTINA</a>
         <a href="indice.html" class="btn"><i class="fas fa-list"></i> INDICE</a>
@@ -24,219 +22,198 @@
 
     <div id="menu-button">☰</div>
     <div id="navbar">
-        <a href="#rete-internet">La rete Internet</a>
-        <a href="#protocolli">Protocolli di comunicazione</a>
-        <a href="#connessione">Connessione a Internet</a>
-        <a href="#servizi">Servizi di Internet</a>
-        <a href="#evoluzione">Evoluzione del Web</a>
-        <a href="#cloud">Cloud Computing</a>
-        <a href="#google">Google Workspace</a>
+        <a href="#definizione-rete">Cosa è una rete</a>
+        <a href="#pan">Personal Area Network</a>
+        <a href="#lan">LAN</a>
+        <a href="#wan">WAN</a>
+        <a href="#gan">GAN</a>
     </div>
 
     <div class="content">
-        <h1><mark>CAP 5 : Reti di Computer e Cloud Computing</mark></h1>
+        <h1><mark>CAPITOLO 5: Le Reti di Computer e il Cloud Computing</mark></h1>
         <div class="image-container">
-            <img src="img/Reti.png" alt="errore" class="medio-img">
+            <img src="img/cap5.avif" alt="Reti di computer" class="medio-img">
         </div>
 
-        <h2 id="rete-internet">1. La rete Internet</h2>
-        <div class="image-container">
-            <img src="img/rete.png" alt="La rete Internet" class="small-img">
-        </div>
-        <p>
-            Internet è una rete globale che collega milioni di dispositivi in tutto il mondo. È composta da una vasta
-            infrastruttura di cavi sottomarini, satelliti, router e server. La sua struttura decentralizzata permette di
-            mantenere la connettività anche in caso di guasti o interruzioni in alcune parti della rete.
-        </p>
-        <p>
-            <strong>Storia di Internet</strong>: Internet è nata come progetto militare negli anni '60 con il nome di
-            ARPANET, finanziato dal Dipartimento della Difesa degli Stati Uniti. L'obiettivo era creare una rete di
-            comunicazione resistente a eventuali attacchi nucleari. Negli anni '80, Internet è diventata una rete aperta
-            e accessibile al pubblico, e negli anni '90 ha visto un'esplosione di crescita grazie all'avvento del World
-            Wide Web.
-        </p>
-        <p>
-            <strong>Infrastruttura fisica</strong>: Internet si basa su una rete fisica complessa che include:
-        <ul>
-            <li><strong>Cavi sottomarini</strong>: Migliaia di chilometri di cavi posati sul fondo degli oceani
-                collegano i continenti. Questi cavi trasportano la maggior parte del traffico dati globale.</li>
-            <li><strong>Satelliti</strong>: Utilizzati per coprire aree remote dove i cavi non possono arrivare, come le
-                regioni polari o le isole più isolate.</li>
-            <li><strong>Router e server</strong>: Dispositivi che gestiscono il traffico dati e memorizzano
-                informazioni. I router indirizzano i pacchetti di dati, mentre i server ospitano siti web e
-                applicazioni.</li>
-        </ul>
-        </p>
+        <main>
+            <section id="definizione-rete">
+                <h2>1. Cosa è una rete</h2>
+                <div class="image-container">
+                    <img src="img/cosa.jpg" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Una rete di computer è un sistema che consente a più dispositivi, come computer, stampanti,
+                    smartphone e server,
+                    di comunicare tra loro per condividere risorse, dati e servizi. Le reti si differenziano in base
+                    alla loro estensione,
+                    topologia e tecnologia utilizzata per la trasmissione dei dati. Possono essere fisiche (basate su
+                    cavi) o wireless (senza fili)
+                    e si avvalgono di protocolli di comunicazione standardizzati, come il TCP/IP (Transmission Control
+                    Protocol/Internet Protocol),
+                    che stabilisce le regole per il trasferimento di pacchetti di dati attraverso la rete.
+                </p>
+                <p>
+                    Le reti sono essenziali per il funzionamento di Internet, dei servizi cloud e per la comunicazione
+                    moderna,
+                    consentendo la condivisione di risorse tra dispositivi, la collaborazione a distanza e l'accesso a
+                    servizi online in tempo reale.
+                    Grazie alle reti, è possibile eseguire operazioni che variano dal semplice scambio di file tra
+                    computer fino alla gestione di
+                    complesse infrastrutture aziendali e tecnologiche.
+                </p>
+                <p>
+                    Tra i vantaggi principali delle reti ci sono l'efficienza nella condivisione delle risorse, la
+                    centralizzazione dei dati
+                    (che semplifica la gestione delle informazioni), la possibilità di lavorare in gruppo anche a
+                    distanza, la scalabilità
+                    (ovvero la possibilità di espandere la rete man mano che crescono le esigenze aziendali o
+                    individuali),
+                    e la facilità di aggiornamento delle risorse software e hardware. Inoltre, l'accesso remoto a
+                    sistemi di archiviazione e
+                    applicazioni cloud consente di ridurre i costi operativi per le aziende e gli utenti finali.
+                </p>
+            </section>
 
+            <section id="pan">
+                <h2>2. Personal Area Network (PAN)</h2>
+                <div class="image-container">
+                    <img src="img/pan.png" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Una PAN (Personal Area Network) è una rete di piccole dimensioni, tipicamente limitata a una
+                    distanza di pochi metri, progettata
+                    per collegare dispositivi personali di un singolo utente. Questo tipo di rete è ideale per scenari
+                    in cui i dispositivi devono
+                    comunicare tra loro senza la necessità di una connessione a Internet. Un esempio tipico di PAN è
+                    quello di collegare il proprio
+                    smartphone a dispositivi come auricolari Bluetooth, smartwatch o laptop, per la sincronizzazione dei
+                    dati o la condivisione di file.
+                </p>
+                <p>
+                    Le tecnologie più comuni utilizzate nelle PAN sono il Bluetooth, che consente la connessione tra
+                    dispositivi a corto raggio,
+                    l'USB, che è utilizzato per il collegamento diretto di dispositivi come stampanti o hard disk
+                    esterni, e il Wi-Fi Direct,
+                    che permette la connessione tra dispositivi senza necessità di un router. Le PAN sono
+                    particolarmente utili per l'integrazione
+                    dei dispositivi mobili in un unico ecosistema, offrendo grande comodità e libertà di movimento
+                    all'utente.
+                </p>
+            </section>
 
-        <h2 id="protocolli">2. I protocolli di comunicazione</h2>
-        <div class="image-container">
-            <img src="img/2.webp" alt="Protocolli di comunicazione" class="small-img">
-        </div>
-        <p>
-            I protocolli di comunicazione sono regole che definiscono come i dati vengono trasmessi e ricevuti
-            attraverso una rete. Il più importante è il <strong>TCP/IP</strong>, che garantisce una trasmissione
-            affidabile e ordinata dei dati.
-        </p>
-        <p>
-            <strong>TCP (Transmission Control Protocol)</strong>: Gestisce la suddivisione dei dati in pacchetti e la
-            loro ricomposizione. Assicura che i dati arrivino correttamente a destinazione, controllando gli errori e
-            richiedendo la ritrasmissione dei pacchetti persi.
-            <strong>IP (Internet Protocol)</strong>: Si occupa dell'indirizzamento e dell'instradamento dei pacchetti.
-            Assegna un indirizzo univoco a ogni dispositivo connesso (indirizzo IP) e determina il percorso migliore per
-            far arrivare i dati a destinazione.
-        </p>
-        <p>
-            <strong>Altri protocolli importanti</strong>:
-        <ul>
-            <li><strong>HTTP/HTTPS</strong>: Utilizzato per il trasferimento di pagine web. HTTPS è la versione sicura,
-                che cripta i dati per proteggere la privacy.</li>
-            <li><strong>FTP</strong>: Per il trasferimento di file tra dispositivi. È spesso utilizzato per caricare
-                file su server web.</li>
-            <li><strong>SMTP</strong>: Per l'invio di email. Gestisce il trasferimento dei messaggi tra server di posta.
-            </li>
-            <li><strong>UDP</strong>: Utilizzato in applicazioni che richiedono velocità, come lo streaming video o i
-                giochi online, ma senza garantire l'affidabilità del TCP.</li>
-        </ul>
-        </p>
+            <section id="lan">
+                <h2>3. Local Area Network (LAN)</h2>
+                <div class="image-container">
+                    <img src="img/lan.jpg" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Una LAN (Local Area Network) è una rete che copre una piccola area geografica, come una casa, un
+                    ufficio, una scuola o un'azienda.
+                    Le LAN sono tra le reti più comuni e vengono utilizzate per connettere dispositivi all'interno di un
+                    edificio o di un'area limitata,
+                    facilitando la condivisione di risorse come stampanti, archiviazione, connessioni Internet e
+                    applicazioni aziendali.
+                </p>
+                <p>
+                    Le LAN utilizzano tecnologie come Ethernet, che impiega cavi fisici per la trasmissione dei dati, e
+                    il Wi-Fi, che consente la
+                    connessione wireless tra i dispositivi. I dispositivi nella rete LAN sono generalmente gestiti da un
+                    router, che smista il traffico
+                    di dati, o da uno switch, che collega direttamente i dispositivi tra loro. Le LAN possono essere
+                    configurate in vari modi,
+                    a seconda delle necessità aziendali o domestiche, e sono relativamente semplici da installare e
+                    gestire.
+                </p>
+            </section>
 
+            <section id="wan">
+                <h2>4. Wide Area Network (WAN)</h2>
+                <div class="image-container">
+                    <img src="img/wan.png" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Una WAN (Wide Area Network) è una rete che collega più LAN distribuite su un'area geografica molto
+                    ampia, come tra città,
+                    regioni, stati o addirittura continenti. Le WAN sono fondamentali per la comunicazione su larga
+                    scala e per la connessione
+                    di sedi aziendali, filiali, e datacenter in diverse località geografiche.
+                </p>
+                <p>
+                    Le WAN utilizzano diversi mezzi di trasmissione dei dati, inclusi cavi in fibra ottica, linee
+                    telefoniche tradizionali,
+                    connessioni satellitari, e reti cellulari. Una delle WAN più conosciute è Internet, che connette
+                    milioni di LAN in tutto
+                    il mondo, consentendo l'accesso a informazioni e servizi globali. Le WAN sono utilizzate
+                    principalmente da aziende
+                    multinazionali, enti governativi, e altre organizzazioni che necessitano di una connessione globale
+                    per operare in modo efficace.
+                </p>
+            </section>
 
-        <h2 id="connessione">3. La connessione a Internet</h2>
-        <div class="image-container">
-            <img src="img/5g.jpg" alt="Connessione a Internet" class="small-img">
-        </div>
-        <p>
-            La connessione a Internet può avvenire attraverso diverse tecnologie:
-            <strong>Connessioni cablate</strong>: Come l'Ethernet e la fibra ottica, che offrono velocità elevate e
-            stabilità. La fibra ottica, in particolare, utilizza segnali luminosi per trasmettere dati a velocità
-            incredibili.
-            <strong>Connessioni wireless</strong>: Come il Wi-Fi e le reti mobili (4G, 5G), che consentono l'accesso da
-            dispositivi mobili. Il 5G, l'ultima generazione, promette velocità fino a 10 Gbps e una latenza molto bassa.
-            <strong>Satellitare</strong>: Utilizzata in aree remote dove non è possibile installare infrastrutture
-            terrestri. Servizi come Starlink di SpaceX stanno rivoluzionando questo settore.
-        </p>
-        <p>
-            <strong>Velocità di connessione</strong>:
-        <ul>
-            <li><strong>ADSL</strong>: Fino a 20 Mbps, adatta per uso domestico ma limitata in termini di velocità.</li>
-            <li><strong>Fibra ottica</strong>: Fino a 1 Gbps o più, ideale per aziende e utenti che richiedono alte
-                prestazioni.</li>
-            <li><strong>5G</strong>: Velocità teoriche fino a 10 Gbps, con una latenza ridotta che permette applicazioni
-                in tempo reale.</li>
-        </ul>
-        </p>
+            <section id="gan">
+                <h2>5. Global Area Network (GAN)</h2>
+                <div class="image-container">
+                    <img src="img/gan.jpg" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Una GAN (Global Area Network) è una rete che collega insieme molteplici WAN e LAN distribuite su
+                    scala mondiale. La GAN è
+                    progettata per garantire una rete unificata e continua che può essere utilizzata senza interruzioni,
+                    indipendentemente dalla
+                    posizione geografica dell'utente. Il suo scopo principale è quello di rendere i servizi digitali
+                    globalmente accessibili in modo fluido
+                    e affidabile, supportando la mobilità e le comunicazioni a livello planetario.
+                </p>
+                <p>
+                    Le GAN sfruttano infrastrutture avanzate, come le dorsali in fibra ottica sottomarine, i satelliti,
+                    e le reti 5G, per garantire una
+                    copertura costante e ad alta velocità. Queste reti sono utilizzate per garantire l'accesso a servizi
+                    cloud globali,
+                    reti di comunicazione intercontinentali e applicazioni che richiedono un'infrastruttura globale.
+                    Esempi di GAN includono sistemi
+                    di telecomunicazione, sistemi bancari globali, e piattaforme di streaming video che operano in
+                    diverse regioni del mondo.
+                </p>
+            </section>
 
-
-        <h2 id="servizi">4. I principali servizi di Internet</h2>
-        <div class="image-container">
-            <img src="img/4.png" alt="Servizi di Internet" class="small-img">
-        </div>
-        <p>
-            Internet offre una vasta gamma di servizi, tra cui:
-            <strong>World Wide Web (WWW)</strong>: Una rete di documenti ipertestuali accessibili tramite browser. È la
-            parte più visibile di Internet, che include miliardi di siti web.
-            <strong>Posta elettronica</strong>: Uno dei primi servizi di Internet, ancora ampiamente utilizzato per la
-            comunicazione personale e professionale.
-            <strong>FTP (File Transfer Protocol)</strong>: Permette il trasferimento di file tra dispositivi. È
-            essenziale per gli sviluppatori web e per chi gestisce server.
-            <strong>Messaggistica istantanea</strong>: Servizi come WhatsApp e Telegram, che permettono di comunicare in
-            tempo reale con messaggi, chiamate e videochiamate.
-            <strong>VoIP (Voice over IP)</strong>: Tecnologia per chiamate vocali e videochiamate, utilizzata da
-            applicazioni come Skype e Zoom.
-        </p>
-        <p>
-            <strong>Servizi emergenti</strong>:
-        <ul>
-            <li><strong>Streaming</strong>: Piattaforme come Netflix e Spotify, che permettono di guardare film, serie
-                TV e ascoltare musica in tempo reale.</li>
-            <li><strong>Cloud Gaming</strong>: Servizi come Google Stadia e Xbox Cloud Gaming, che permettono di giocare
-                a videogiochi direttamente dal cloud, senza bisogno di hardware potente.</li>
-            <li><strong>IoT (Internet of Things)</strong>: Dispositivi connessi come smart home devices, che permettono
-                di controllare luci, termostati e altri apparecchi da remoto.</li>
-        </ul>
-        </p>
-
-
-        <h2 id="evoluzione">5. L'evoluzione e i servizi del Web</h2>
-        <div class="image-container">
-            <img src="img/web.jpg" alt="Evoluzione del Web" class="small-img">
-        </div>
-        <p>
-            Il Web è evoluto da una semplice piattaforma di documenti statici a un ambiente dinamico e interattivo.
-            <strong>Web 1.0</strong>: Pagine statiche e contenuti di sola lettura. Gli utenti potevano solo visualizzare
-            informazioni senza interagire.
-            <strong>Web 2.0</strong>: Interattività, social media e piattaforme di condivisione. Gli utenti possono
-            creare contenuti, commentare e condividere informazioni.
-            <strong>Web 3.0</strong>: Intelligenza artificiale, blockchain e decentralizzazione. Il Web 3.0 mira a
-            creare un Internet più intelligente e sicuro, dove gli utenti hanno il controllo dei propri dati.
-        </p>
-        <p>
-            <strong>Caratteristiche del Web 3.0</strong>:
-        <ul>
-            <li><strong>Decentralizzazione</strong>: Utilizzo di tecnologie come blockchain per eliminare intermediari e
-                garantire maggiore trasparenza.</li>
-            <li><strong>Intelligenza Artificiale</strong>: Miglioramento dell'interazione tra utenti e macchine, con
-                assistenti virtuali e ricerche più intelligenti.</li>
-            <li><strong>Realtà aumentata e virtuale</strong>: Integrazione di AR e VR nel web, per esperienze immersive
-                e interattive.</li>
-        </ul>
-        </p>
-
-
-        <h2 id="cloud">6. Il cloud computing</h2>
-        <div class="image-container">
-            <img src="img/cluod.jpg" alt="Cloud Computing" class="small-img">
-        </div>
-        <p>
-            Il cloud computing è un modello che fornisce risorse computazionali (server, storage, database) tramite
-            Internet.
-            <strong>Vantaggi</strong>: Scalabilità, accessibilità e costi ridotti. Le aziende possono aumentare o
-            diminuire le risorse in base alle esigenze, pagando solo per ciò che utilizzano.
-            <strong>Tipi di cloud</strong>: Pubblico, privato e ibrido. Il cloud pubblico è gestito da provider come AWS
-            e Google Cloud, mentre il cloud privato è dedicato a una singola organizzazione.
-        </p>
-        <p>
-            <strong>Esempi di servizi cloud</strong>:
-        <ul>
-            <li><strong>IaaS (Infrastructure as a Service)</strong>: Amazon Web Services (AWS), che fornisce server
-                virtuali e storage.</li>
-            <li><strong>PaaS (Platform as a Service)</strong>: Google App Engine, che offre una piattaforma per
-                sviluppare e ospitare applicazioni.</li>
-            <li><strong>SaaS (Software as a Service)</strong>: Microsoft 365, che fornisce applicazioni come Word ed
-                Excel tramite il cloud.</li>
-        </ul>
-        </p>
-
-
-        <h2 id="google">7. Google Workspace</h2>
-        <div class="image-container">
-            <img src="img/Google Workspace.png" alt="Google Workspace" class="small-img">
-        </div>
-        <p>
-            Google Workspace è una suite di strumenti cloud-based per la produttività e la collaborazione. Include:
-            <strong>Gmail</strong>: Servizio di posta elettronica con funzionalità avanzate come la categorizzazione
-            automatica delle email.
-            <strong>Google Drive</strong>: Archiviazione cloud che permette di salvare e condividere file in modo
-            sicuro.
-            <strong>Google Docs, Sheets, Slides</strong>: Applicazioni per creare documenti, fogli di calcolo e
-            presentazioni, con la possibilità di collaborare in tempo reale.
-            <strong>Google Meet</strong>: Piattaforma per videoconferenze, ideale per riunioni e lezioni online.
-        </p>
-        <p>
-            <strong>Vantaggi di Google Workspace</strong>:
-        <ul>
-            <li><strong>Collaborazione in tempo reale</strong>: Più utenti possono lavorare sullo stesso documento
-                contemporaneamente, con modifiche visibili in tempo reale.</li>
-            <li><strong>Accessibilità</strong>: Accesso ai file da qualsiasi dispositivo connesso a Internet, senza
-                bisogno di installare software.</li>
-            <li><strong>Integrazione</strong>: Facile integrazione con altri servizi Google e di terze parti, come CRM e
-                strumenti di project management.</li>
-        </ul>
-        </p>
-
+            <section id="cloud-computing">
+                <h2>6. Cloud Computing</h2>
+                <div class="image-container">
+                    <img src="img/cap5(6).png" alt="Diagramma di rete" class="medio-img">
+                </div>
+                <p>
+                    Il cloud computing è un modello di fornitura di servizi informatici che sfrutta Internet per erogare
+                    risorse come server,
+                    archiviazione, applicazioni e potenza di calcolo, riducendo la necessità di infrastrutture fisiche
+                    locali. Invece di installare
+                    software e gestire hardware in modo tradizionale, gli utenti possono accedere a queste risorse da
+                    remoto, pagando solo per
+                    l'utilizzo effettivo.
+                </p>
+                <p>
+                    Esistono tre modelli principali di cloud computing: <strong>IaaS</strong> (Infrastructure as a
+                    Service), che fornisce risorse hardware
+                    virtualizzate come server e storage; <strong>PaaS</strong> (Platform as a Service), che fornisce
+                    ambienti di sviluppo e gestione
+                    per costruire e implementare applicazioni; e <strong>SaaS</strong> (Software as a Service), che
+                    offre applicazioni software
+                    accessibili via Internet, come la posta elettronica o il software di gestione aziendale.
+                </p>
+                <p>
+                    I vantaggi del cloud computing includono la scalabilità, che consente alle aziende di adattare
+                    facilmente le risorse in base alla domanda,
+                    la flessibilità di accedere a dati e applicazioni da qualsiasi luogo con connessione a Internet, la
+                    riduzione dei costi di hardware
+                    e manutenzione, e la possibilità di innovare più rapidamente grazie all'accesso a risorse di calcolo
+                    avanzate. Inoltre, il cloud computing
+                    favorisce la collaborazione in tempo reale, migliorando l'efficienza dei team di lavoro distribuiti
+                    in tutto il mondo.
+                </p>
+            </section>
+        </main>
     </div>
 
-    <div class="arrow-up" onclick="scrollToTop()">↑</div>
+    <i class="fas fa-arrow-up arrow-up" onclick="scrollToTop()"></i>
 
     <script>
         // Funzione per mostrare/nascondere il menu

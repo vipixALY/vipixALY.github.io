@@ -32,33 +32,29 @@
 
     <script>
         function createBinaryStream() {
-            const numberOfBinaries = 5; // عدد الأرقام الثنائية المراد إنشاؤها في كل مرة
+            const numberOfBinaries = 5;
             for (let i = 0; i < numberOfBinaries; i++) {
                 const binary = document.createElement('div');
                 binary.className = 'binary';
                 binary.textContent = Math.round(Math.random()) ? '0' : '1';
                 binary.style.left = Math.random() * window.innerWidth + 'px';
                 binary.style.top = -20 + 'px';
-
-                // تغيير اللون عشوائيًا بين ثلاثة ألوان
                 const colors = ['green', 'lime', 'lightgreen'];
                 binary.style.color = colors[Math.floor(Math.random() * colors.length)];
-
                 document.body.appendChild(binary);
-
                 let fallInterval = setInterval(() => {
                     let top = parseInt(binary.style.top);
                     if (top < window.innerHeight) {
-                        binary.style.top = (top + 10) + 'px'; // سرعة السقوط
+                        binary.style.top = (top + 10) + 'px';
                     } else {
                         clearInterval(fallInterval);
                         document.body.removeChild(binary);
                     }
-                }, 30); // تقليل الوقت بين التحركات لزيادة السرعة
+                }, 30);
             }
         }
 
-        setInterval(createBinaryStream, 70); // إنشاء رقم ثنائي جديد كل 70 مللي ثانية
+        setInterval(createBinaryStream, 70);
     </script>
 </body>
 
