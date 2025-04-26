@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">أحمد - مطور ويب</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Arabic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- English Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Italian Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo" data-translate="logo">أحمد</div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-translate="home">الرئيسية</a></li>
+                    <li><a href="#about" data-translate="about">عني</a></li>
+                    <li><a href="#projects" data-translate="projects">مشاريعي</a></li>
+                    <li><a href="#skills" data-translate="skills">مهاراتي</a></li>
+                    <li><a href="#contact" data-translate="contact">اتصل بي</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <div class="theme-toggle">
+                        <button id="themeToggle" aria-label="Toggle Dark Mode">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="language-switcher">
+                        <button id="langToggle" aria-label="Change Language">
+                            <span class="current-lang">AR</span>
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button data-lang="ar">العربية</button>
+                            <button data-lang="en">English</button>
+                            <button data-lang="it">Italiano</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-text"><span data-translate="heroTitle">مرحباً، أنا</span> <span class="highlight" data-translate="heroName">أحمد</span></h1>
+                    <h2 class="animate-text" data-translate="heroSubtitle">مطور ويب</h2>
+                    <p class="animate-text" data-translate="heroDescription">أقوم بتصميم وتطوير مواقع الويب باستخدام HTML و CSS و JavaScript</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn animate-btn" data-translate="viewProjects">مشاهدة أعمالي</a>
+                        <a href="#contact" class="btn secondary-btn animate-btn" data-translate="contactMe">اتصل بي</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img-placeholder">
+                        <div class="profile-border"></div>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="hero-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-translate="aboutTitle">عني</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-translate="aboutText1">أنا مطور ويب متخصص في إنشاء مواقع ويب تفاعلية وجذابة. أستخدم HTML و CSS و JavaScript لإنشاء تجارب مستخدم استثنائية.</p>
+                    <p data-translate="aboutText2">أسعى دائمًا لتعلم تقنيات جديدة وتحسين مهاراتي لتقديم أفضل الحلول لعملائي.</p>
+                </div>
+                <div class="about-skills">
+                    <div class="skill">
+                        <span data-translate="html5">HTML</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span data-translate="css3">CSS</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span data-translate="js">JavaScript</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span data-translate="responsive">تصميم متجاوب</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-translate="services">خدماتي</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 data-translate="webDev">تطوير الويب</h3>
+                    <p data-translate="webDevDesc">تصميم وتطوير مواقع ويب متجاوبة وعصرية باستخدام أحدث التقنيات</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 data-translate="responsiveDesign">تصميم متجاوب</h3>
+                    <p data-translate="responsiveDesc">تأكد من أن موقعك يعمل بشكل مثالي على جميع الأجهزة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3 data-translate="uiDesign">تصميم واجهة المستخدم</h3>
+                    <p data-translate="uiDesc">إنشاء واجهات مستخدم جذابة وسهلة الاستخدام</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3 data-translate="seo">تحسين محركات البحث</h3>
+                    <p data-translate="seoDesc">تحسين ظهور موقعك في نتائج محركات البحث</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title" data-translate="pricing">الأسعار</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-translate="basicPlan">الموقع الأساسي</h3>
+                        <div class="price">
+                            <span class="amount">$299</span>
+                            <span class="period" data-translate="oneTime">/ مرة واحدة</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> <span data-translate="responsive">تصميم متجاوب</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="fivePages">5 صفحات</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="contactForm">نموذج اتصال</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="oneMonthSupport">دعم لمدة شهر</span></li>
+                    </ul>
+                    <a href="#contact" class="btn primary-btn" data-translate="orderNow">اطلب الآن</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3 data-translate="advancedPlan">الموقع المتقدم</h3>
+                        <div class="price">
+                            <span class="amount">$499</span>
+                            <span class="period" data-translate="oneTime">/ مرة واحدة</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> <span data-translate="responsive">تصميم متجاوب</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="tenPages">10 صفحات</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="cms">نظام إدارة المحتوى</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="threeMonthsSupport">دعم لمدة 3 أشهر</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="seo">تحسين محركات البحث</span></li>
+                    </ul>
+                    <a href="#contact" class="btn primary-btn" data-translate="orderNow">اطلب الآن</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 data-translate="premiumPlan">الموقع المتميز</h3>
+                        <div class="price">
+                            <span class="amount">$799</span>
+                            <span class="period" data-translate="oneTime">/ مرة واحدة</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> <span data-translate="responsive">تصميم متجاوب</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="unlimitedPages">صفحات غير محدودة</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="advancedCms">نظام إدارة محتوى متقدم</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="sixMonthsSupport">دعم لمدة 6 أشهر</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="seo">تحسين محركات البحث</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="ecommerce">متجر إلكتروني</span></li>
+                    </ul>
+                    <a href="#contact" class="btn primary-btn" data-translate="orderNow">اطلب الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2 class="section-title" data-translate="clients">عملاؤنا</h2>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-logo">
+                        <img src="images/clients/client1.png" alt="عميل 1">
+                    </div>
+                    <div class="client-info">
+                        <h3 data-translate="techCompany">شركة التقنية</h3>
+                        <p data-translate="techCompanyDesc">شركة رائدة في مجال التكنولوجيا</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">
+                        <img src="images/clients/client2.png" alt="عميل 2">
+                    </div>
+                    <div class="client-info">
+                        <h3 data-translate="ecommerceStore">متجر إلكتروني</h3>
+                        <p data-translate="ecommerceDesc">أكبر متجر إلكتروني في المنطقة</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">
+                        <img src="images/clients/client3.png" alt="عميل 3">
+                    </div>
+                    <div class="client-info">
+                        <h3 data-translate="marketingAgency">وكالة تسويق</h3>
+                        <p data-translate="marketingDesc">وكالة تسويق رقمية متخصصة</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">
+                        <img src="images/clients/client4.png" alt="عميل 4">
+                    </div>
+                    <div class="client-info">
+                        <h3 data-translate="restaurant">مطعم شهير</h3>
+                        <p data-translate="restaurantDesc">مطعم ذو شهرة واسعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-translate="projects">مشاريعي</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all" data-translate="all">الكل</button>
+                <button class="filter-btn" data-filter="web" data-translate="web">مواقع الويب</button>
+                <button class="filter-btn" data-filter="app" data-translate="app">تطبيقات</button>
+                <button class="filter-btn" data-filter="design" data-translate="design">تصميم</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="images/projects/project1.png" alt="مشروع 1">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project1Title">تصميم واجهة المستخدم الإبداعية</h3>
+                        <p data-translate="project1Desc">موقع ويب تفاعلي بتصميم عصري وألوان جذابة، تم إنشاؤه باستخدام HTML و CSS و JavaScript.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn" data-translate="preview">معاينة</a>
+                            <a href="#" class="btn small-btn" data-translate="code">الكود</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-img">
+                        <img src="images/projects/project2.png" alt="مشروع 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project2Title">موقع المدير الفني</h3>
+                        <p data-translate="project2Desc">تطبيق ويب متكامل لمدير فني مع واجهة مستخدم سلسة وتجربة مستخدم ممتازة وتصميم فريد.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Animation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn" data-translate="preview">معاينة</a>
+                            <a href="#" class="btn small-btn" data-translate="code">الكود</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-img">
+                        <img src="images/projects/project3.png" alt="مشروع 3">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-translate="project3Title">منصة تصميم تفاعلية</h3>
+                        <p data-translate="project3Desc">موقع ويب متجاوب يعمل على جميع الأجهزة بتصميم عصري وأنيق مع واجهة مستخدم سهلة الاستخدام.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn" data-translate="preview">معاينة</a>
+                            <a href="#" class="btn small-btn" data-translate="code">الكود</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-translate="skills">مهاراتي</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p data-translate="html5Desc">بناء هيكل الويب باستخدام أحدث معايير HTML5</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p data-translate="css3Desc">تصميم وتنسيق مواقع الويب باستخدام CSS3 المتقدمة</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p data-translate="jsDesc">إضافة التفاعل والحركة إلى مواقع الويب</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p data-translate="responsiveDesc">تصميم مواقع ويب تعمل على جميع أحجام الشاشات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-translate="testimonials">شهادات العملاء</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text" data-translate="testimonial1">أحمد مطور متميز، قام بتصميم موقعنا بشكل احترافي مع الاهتمام بكل التفاصيل. نوصي به بشدة!</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/testimonials/client1.jpg" alt="عميل 1">
+                            </div>
+                            <div class="author-info">
+                                <h4 data-translate="client1Name">محمد أحمد</h4>
+                                <p data-translate="client1Position">مدير شركة التقنية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text" data-translate="testimonial2">عمل رائع! أحمد يتميز بالإبداع والاحترافية في العمل. موقعنا الآن يعمل بشكل ممتاز.</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/testimonials/client2.jpg" alt="عميل 2">
+                            </div>
+                            <div class="author-info">
+                                <h4 data-translate="client2Name">سارة محمد</h4>
+                                <p data-translate="client2Position">مالكة متجر إلكتروني</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                        <p class="testimonial-text" data-translate="testimonial3">تعامل احترافي ونتائج متميزة. أحمد يقدم دائماً أفضل الحلول التقنية.</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/testimonials/client3.jpg" alt="عميل 3">
+                            </div>
+                            <div class="author-info">
+                                <h4 data-translate="client3Name">علي حسن</h4>
+                                <p data-translate="client3Position">مدير التسويق</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-btn" data-translate="prev"><i class="fas fa-chevron-right"></i></button>
+                <button class="next-btn" data-translate="next"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-translate="contactTitle">اتصل بي</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-translate="email">البريد الإلكتروني</h3>
+                            <p><a href="mailto:vipixgames1@gmail.com">vipixgames1@gmail.com</a></p>
+                            <p><a href="mailto:vipix1069@gmail.com">vipix1069@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3 data-translate="social">التواصل الاجتماعي</h3>
+                            <div class="social-links">
+                                <a href="https://www.tiktok.com/@vipix_1" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                                <a href="https://www.instagram.com/ahmed.152009" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span data-translate="logo">أحمد</span>. <span data-translate="rights">جميع الحقوق محفوظة.</span></p>
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@vipix_1" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/ahmed.152009" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
