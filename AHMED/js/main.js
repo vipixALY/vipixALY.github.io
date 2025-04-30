@@ -672,6 +672,174 @@ const projectAnimation = () => {
     });
 };
 
+// Enhanced Scroll Reveal Animation
+const scrollReveal = () => {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+        reveals.forEach(reveal => {
+            const revealTop = reveal.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (revealTop < windowHeight - 100) {
+                reveal.classList.add('active');
+                // Add additional effects based on element type
+                if (reveal.classList.contains('project-card')) {
+                    reveal.style.animation = 'scaleIn 0.5s ease-out forwards';
+                } else if (reveal.classList.contains('skill-item')) {
+                    reveal.style.animation = 'slideInFromBottom 0.8s ease-out forwards';
+                }
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+};
+
+// Enhanced Loading Animation
+const enhancedLoader = () => {
+    const loader = document.querySelector('.loader');
+    const body = document.body;
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            body.style.overflow = 'visible';
+            
+            // Add initial animations to elements
+            document.querySelectorAll('.hero-text > *').forEach((el, index) => {
+                el.style.animation = `fadeInUp 1s ease-out ${index * 0.2}s forwards`;
+            });
+            
+            // Add glow effect to profile image
+            const profileImg = document.querySelector('.profile-img-placeholder');
+            if (profileImg) {
+                profileImg.classList.add('animate-glow');
+            }
+        }, 1000);
+    });
+};
+
+// Enhanced Project Card Animations
+const enhancedProjectAnimations = () => {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-20px) scale(1.02)';
+            card.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+            
+            // Add shine effect to project image
+            const projectImg = card.querySelector('.project-img img');
+            if (projectImg) {
+                projectImg.style.transform = 'scale(1.1)';
+                projectImg.style.transition = 'transform 0.5s ease';
+            }
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+            
+            // Reset project image
+            const projectImg = card.querySelector('.project-img img');
+            if (projectImg) {
+                projectImg.style.transform = 'scale(1)';
+            }
+        });
+    });
+};
+
+// Enhanced Skill Bar Animations
+const enhancedSkillAnimations = () => {
+    const skillBars = document.querySelectorAll('.skill-level');
+    
+    const animateSkillBars = () => {
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+                bar.classList.add('animate-shine');
+            }, 100);
+        });
+    };
+    
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateSkillBars();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    document.querySelector('.skills').addEventListener('mouseenter', animateSkillBars);
+};
+
+// Enhanced Testimonial Animations
+const enhancedTestimonialAnimations = () => {
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    
+    testimonialCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-15px) rotate(2deg)';
+            card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+            
+            // Add wave effect to quote icon
+            const quoteIcon = card.querySelector('.quote-icon');
+            if (quoteIcon) {
+                quoteIcon.classList.add('animate-wave');
+            }
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) rotate(0)';
+            card.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+            
+            // Remove wave effect
+            const quoteIcon = card.querySelector('.quote-icon');
+            if (quoteIcon) {
+                quoteIcon.classList.remove('animate-wave');
+            }
+        });
+    });
+};
+
+// Enhanced Button Hover Effects
+const enhancedButtonEffects = () => {
+    const buttons = document.querySelectorAll('.btn');
+    
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.classList.add('animate-bounce');
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.classList.remove('animate-bounce');
+        });
+    });
+};
+
+// Enhanced Shape Animations
+const enhancedShapeAnimations = () => {
+    const shapes = document.querySelectorAll('.shape');
+    
+    shapes.forEach(shape => {
+        shape.addEventListener('mouseenter', () => {
+            shape.style.opacity = '0.2';
+            shape.style.transform = 'scale(1.2)';
+        });
+        
+        shape.addEventListener('mouseleave', () => {
+            shape.style.opacity = '0.1';
+            shape.style.transform = 'scale(1)';
+        });
+    });
+};
+
 // Initialize All Functions
 const app = () => {
     themeToggle();
@@ -685,4 +853,11 @@ const app = () => {
     testimonialSlider();
     projectFilter();
     projectAnimation();
+    scrollReveal();
+    enhancedLoader();
+    enhancedProjectAnimations();
+    enhancedSkillAnimations();
+    enhancedTestimonialAnimations();
+    enhancedButtonEffects();
+    enhancedShapeAnimations();
 };
