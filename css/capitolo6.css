@@ -1,0 +1,279 @@
+body {
+  background-color: rgb(91, 77, 104);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0px;
+}
+
+.button {
+  text-align: center; 
+  margin-top: 1px;
+}
+
+.btn {
+  display: inline-block; 
+  padding: 12px 24px;
+  margin: 10px;
+  background: linear-gradient(
+    45deg,
+    #5a5a5a,
+    #757575
+  ); 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.btn:hover {
+  color: red;
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn i {
+  margin-right: 8px; 
+}
+
+#menu-button {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+#navbar {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  display: none; 
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  display: block;
+  font-size: 16px;
+}
+
+#navbar a:hover {
+  background-color: #555;
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+.small-img {
+  width: 50%;
+  max-width: 300px;
+}
+
+.medio-img {
+  width: 60%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+.arrow-up {
+  font-size: 50px;
+  color: #007bff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.arrow-up:hover {
+  color: #0056b3;
+}
+
+/* Stili per le sezioni di analisi del tempo */
+.screen-time-analysis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.time-category {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.time-category h4 {
+    color: #f01010;
+    margin-bottom: 10px;
+}
+
+.time-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.time-category li {
+    margin: 5px 0;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Stili per le sezioni di approfondimento */
+.subsection {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.subsection h3 {
+    color: #f01010;
+    margin-bottom: 15px;
+}
+
+.subsection ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.subsection li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    color: white;
+}
+
+/* Stili per evidenziare i punti chiave */
+.highlight {
+    background: rgba(216, 16, 16, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Stili per le icone */
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon-box i {
+    margin-right: 5px;
+    color: #f01010;
+}
+
+/* Stili per le statistiche */
+.stats-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 24px;
+    color: #f01010;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: white;
+    margin-top: 5px;
+}
+
+/* Stili per le sezioni di difesa e privacy */
+.security-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.tip-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tip-card i {
+    font-size: 24px;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+/* Stili per le sezioni positive */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.benefit-card h4 {
+    color: #f01010;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: white;
+    margin: 0;
+}
