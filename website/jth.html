@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cristiano Ronaldo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 255, 0.6), #008bba);
+      }
+
+      #clock {
+        float: right;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        display: flex;
+        height: 30px;
+        color: #333;
+        background-color: #eeeeee;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .box {
+        display: inline-block;
+        width: 30%;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .box h2 {
+        margin: 0;
+      }
+
+      .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 4px 5px rgba(255, 13, 0, 0.81);
+      }
+
+      .img {
+        border-radius: 8px;
+      }
+
+      h2 {
+        background-color: #0900bd58;
+        border: none;
+        color: #ffffff;
+        padding: 15px 3px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 5xp 10px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      h1 {
+        background-color: #0900bd;
+        border: none;
+        color: #ffffff;
+        padding: 15px 555px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 5xp 10px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PAGINE</h1>
+
+    <div id="clock"></div>
+
+    <div class="box hidden">
+      <a href="perchè.html">
+        <img
+          src="IMAGE/perchè0.jpg"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>PERCHÈ HO SCELTO RONALDO</h2>
+      </a>
+    </div>
+
+    <div class="box hidden">
+      <a href="cr7.html">
+        <img
+          src="GIF/cr7 man.gif"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>imprenditore CR7 MAN</h2>
+      </a>
+    </div>
+
+    <div class="box hidden">
+      <a href="ronaldo e portogallo.html">
+        <img
+          src="GIF/ronaldo con portogallo.gif"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>Ronaldo e il Portogallo</h2>
+      </a>
+    </div>
+
+    <div class="box hidden">
+      <a href="carriera.html">
+        <img
+          src="GIF/carriera0.gif"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>La Carriera</h2>
+      </a>
+    </div>
+
+    <div class="box hidden">
+      <a href="costruire.html">
+        <img
+          src="GIF/costruire0.gif"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>Costruire se Stessi</h2>
+      </a>
+    </div>
+
+    <div class="box hidden">
+      <a href="educazione civica.html">
+        <img
+          src="IMAGE/educazione civica.jpg"
+          alt="＞﹏＜"
+          style="max-width: 100%; height: auto; border-radius: 8px"
+        />
+        <h2>Educazione Civica</h2>
+      </a>
+    </div>
+
+    <script>
+      var startTime = new Date().getTime();
+
+      function displayTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var meridiem = "AM";
+
+        if (hours > 12) {
+          hours = hours - 12;
+          meridiem = "PM";
+        }
+
+        minutes = padZero(minutes);
+        seconds = padZero(seconds);
+
+        document.getElementById("clock").innerHTML =
+          hours + ":" + minutes + ":" + seconds + " " + meridiem;
+
+        if (startTime !== 0) {
+          var currentTime = new Date().getTime();
+          var elapsedTime = currentTime - startTime;
+
+          var elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
+          var elapsedMinutes = Math.floor(
+            (elapsedTime % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          var elapsedSeconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+          elapsedMinutes = padZero(elapsedMinutes);
+          elapsedSeconds = padZero(elapsedSeconds);
+
+          document.getElementById("clock").innerHTML +=
+            "<br>  " +
+            elapsedHours +
+            ":" +
+            elapsedMinutes +
+            ":" +
+            elapsedSeconds;
+        }
+      }
+
+      function padZero(number) {
+        return (number < 10 ? "0" : "") + number;
+      }
+
+      setInterval(displayTime, 1000);
+
+      displayTime();
+
+      // Get all.box elements
+      const boxes = document.querySelectorAll(".box.hidden");
+
+      // Function to check if an element is in view
+      function isInView(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Add event listener for scroll event
+      window.addEventListener("scroll", () => {
+        boxes.forEach((box) => {
+          if (isInView(box)) {
+            // Remove the "hidden" class to reveal the element
+            box.classList.remove("revealed");
+
+            // Add animation or loading effect here
+            box.style.opacity = 1;
+            box.style.transform = "cale(1)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
