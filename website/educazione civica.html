@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="it"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> EDUCAZIONE CIVICA </title> 
+    <style>
+
+      body { 
+      background-color: #212121;
+     } 
+        
+      .btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+     }
+
+     .btn:active {
+    scale: 0.92;
+     }
+
+     .btn:hover {
+     background: rgb(2,29,78);
+     background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+     color: rgb(4, 4, 38);
+     }
+ 
+     h1 {
+      color: aliceblue;
+      background-color: blue;
+      cursor: pointer; 
+      width: 360px;
+      height: 35px;
+        }    
+
+      h2 {
+      color: aliceblue;
+      cursor: pointer; 
+      font-family:"Times new roman ",'Times New Roman', Times, serif ;
+        }  
+
+    
+        .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1; /* to make the arrows appear on top */
+      }
+
+      .left-arrow {
+        left: 50px;
+      }
+
+      .right-arrow {
+        right: 50px;
+      }
+
+      .right-arrow:hover {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(32, 11, 167, 0.826);
+        transition: color 0.3s ease, background-color o.3s ease;
+      }
+
+      .left-arrow:hover {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(32, 11, 167, 0.826);
+        transition: color 0.3s ease, background-color o.3s ease;
+
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        text-align: center;
+        z-index: 1; /* to make the content appear on top */
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 15px;
+      }
+
+      .my-image {
+        height: 555px;
+        width: auto;
+        border-radius: 10px;
+        
+      } 
+
+
+
+
+
+
+    </style> 
+  </head> 
+ <body> 
+
+
+
+   <button class="btn" onclick="goBack()"> indietro </button>
+   <h1>EDUCAZIONE CIVICA</h1> 
+   <h2>LA BENEFICENZA DI CRISTIANO RONALDO</h2>
+   <!-- محتوى الصفحة -->
+    <div class="container"> 
+      <img src="IMAGE/civica1.jpg" alt="ERRORE FOTO＞﹏＜" class="my-image"> 
+      <div class="arrow left-arrow" onclick="prevImage()">&larr;</div>
+      <div class="arrow right-arrow" onclick="nextImage()">&rarr;</div>
+      <div class="content">
+      </div>
+    </div>
+
+
+
+
+    <script> 
+         function goBack() { 
+            window.history.back(); 
+           }  
+      
+
+
+           var currentImageIndex = 0;
+      var images = ["IMAGE/civica1.jpg"]; // add more image URLs if needed
+
+      function prevImage() {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+          currentImageIndex = images.length - 1;
+        }
+        updateImage();
+      }
+
+      function nextImage() {
+        currentImageIndex++;
+        if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+        updateImage();
+      }
+
+      function updateImage() {
+        var image = document.querySelector(".my-image");
+        image.src = images[currentImageIndex];
+      }
+
+
+    </script> 
+  </body> 
+</html>

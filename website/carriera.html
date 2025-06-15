@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>la carriera</title>
+    <style>
+      body {
+        background-image: url("IMAGE/BACK.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*per il foto di back grauond*/
+        background-color: #212121;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: rgb(14, 14, 26);
+        color: rgb(234, 234, 234);
+        font-weight: 700;
+        transition: 0.6s;
+        box-shadow: 0px 0px 60px #1f4c65;
+        -webkit-box-reflect: below 10px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn:active {
+        scale: 0.92;
+      }
+
+      .btn:hover {
+        background: rgb(2, 29, 78);
+        background: linear-gradient(
+          270deg,
+          rgba(2, 29, 78, 0.681) 0%,
+          rgba(31, 215, 232, 0.873) 60%
+        );
+        color: rgb(4, 4, 38);
+      }
+
+      h1 {
+        color: aliceblue;
+        background-color: blue;
+        cursor: pointer;
+        width: 235px;
+        height: 35px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1; /* to make the arrows appear on top */
+      }
+
+      .left-arrow {
+        left: 50px;
+      }
+
+      .right-arrow {
+        right: 50px;
+      }
+
+      .right-arrow:hover {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(32, 11, 167, 0.826);
+        transition: color 0.3s ease, background-color o.3s ease;
+      }
+
+      .left-arrow:hover {
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(32, 11, 167, 0.826);
+        transition: color 0.3s ease, background-color o.3s ease;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        text-align: center;
+        z-index: 1; /* to make the content appear on top */
+        font-size: 2rem;
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 15px;
+        margin-bottom: 20px;
+      }
+
+      .my-image {
+        height: 555px;
+        width: auto;
+        border-radius: 10px;
+      }
+
+      .my-image {
+        text-align: center;
+      }
+
+      /* Style for the image */
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: 555px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      /* Style for the video */
+      video {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" onclick="goBack()">indietro</button>
+    <h1>LA CARRIERA</h1>
+    <!-- محتوى الصفحة -->
+    <div class="container">
+      <img
+        src="IMAGE/carriera1.jpg"
+        alt="ERRORE FOTO＞﹏＜"
+        class="my-image"
+        style="margin-bottom: 20px"
+        lazy=" loading"
+      />
+      <div class="arrow left-arrow" onclick="prevImage()">&larr;</div>
+      <div class="arrow right-arrow" onclick="nextImage()">&rarr;</div>
+      <div class="content"></div>
+    </div>
+
+    <video
+      src="GOL.mp4"
+      controls
+      class="my-image"
+      style="margin-bottom: 20px"
+    ></video>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      var currentImageIndex = 0;
+      var images = [
+        "IMAGE/carriera1.jpg",
+        "IMAGE/carriera2.jpg",
+        "IMAGE/carriera3.jpg",
+        "IMAGE/carriera4.jpg",
+        "IMAGE/carriera5.jpg",
+        "IMAGE/carriera6.jpg",
+        "IMAGE/carriera7.jpg",
+        // Add more image URLs if needed
+      ];
+
+      function prevImage() {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+          currentImageIndex = images.length - 1;
+        }
+        updateImage();
+      }
+
+      function nextImage() {
+        currentImageIndex++;
+        if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+        updateImage();
+      }
+
+      function updateImage() {
+        const imgElement = document.getElementById("my-image");
+        imgElement.classList.remove("loaded");
+        imgElement.dataset.src = images[currentImageIndex];
+        lazyLoad(imgElement);
+      }
+
+      // Intersection Observer for lazy loading images
+      function lazyLoad(imgElement) {
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.src = entry.target.dataset.src;
+              entry.target.onload = () => {
+                entry.target.classList.add("loaded");
+              };
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        observer.observe(imgElement);
+      }
+
+      // Load the first image
+      updateImage();
+
+      function playVideo() {
+        var video = document.getElementById("video");
+        video.play();
+      }
+
+      function updateImage() {
+        var image = document.querySelector(".my-image");
+        image.src = images[currentImageIndex];
+      }
+
+      function playVideo() {
+        var video = document.getElementById("video");
+        video.play();
+        video.pause();
+        video.skip();
+      }
+    </script>
+  </body>
+</html>
