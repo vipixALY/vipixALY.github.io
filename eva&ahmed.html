@@ -1,0 +1,506 @@
+SCUOLA, [22/11/2025 22:20]
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per la Mia EVA 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Playfair Display', serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        position: relative;
+        padding: 20px;
+    }
+
+    /* Hearts Animation Background */
+    .heart {
+        position: absolute;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.3);
+        animation: float 15s infinite;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 700px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Custom Scrollbar */
+    .container::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .container::-webkit-scrollbar-track {
+        background: rgba(118, 75, 162, 0.1);
+        border-radius: 10px;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        color: #764ba2;
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .intro {
+        font-size: 1.2em;
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .question-container {
+        margin: 20px 0;
+        text-align: left;
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .question-container:hover {
+        transform: translateY(-5px);
+    }
+
+    .question {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.05em;
+        border: 3px solid #764ba2;
+        border-radius: 12px;
+        outline: none;
+        transition: all 0.3s;
+        font-family: 'Playfair Display', serif;
+        background: white;
+    }
+
+    input[type="text"]:focus, input[type="date"]:focus {
+        border-color: #f093fb;
+        box-shadow: 0 0 15px rgba(240, 147, 251, 0.5);
+        transform: scale(1.02);
+    }
+
+    .btn {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 15px 50px;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: all 0.3s;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        box-shadow: 0 5px 20px rgba(118, 75, 162, 0.4);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(118, 75, 162, 0.6);
+    }
+
+    .result {
+        display: none;
+
+SCUOLA, [22/11/2025 22:20]
+animation: slideIn 0.8s;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .success {
+        color: #764ba2;
+    }
+
+    .success h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        margin: 20px 0;
+        color: #f093fb;
+    }
+
+    .success p {
+        font-size: 1.3em;
+        line-height: 1.8;
+        margin: 15px 0;
+    }
+
+    .romantic-message {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        padding: 30px;
+        border-radius: 20px;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .hearts-burst {
+        font-size: 3em;
+        margin: 20px 0;
+        animation: burst 1s infinite;
+    }
+
+    @keyframes burst {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+    }
+
+    .failure {
+        color: #e74c3c;
+        font-size: 1.2em;
+    }
+
+    .sparkle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: white;
+        border-radius: 50%;
+        animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+    }
+
+    .audio-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s;
+    }
+
+    .audio-control:hover {
+        transform: scale(1.1);
+        background: white;
+    }
+
+    .audio-control span {
+        font-size: 1.5em;
+    }
+
+    .hint {
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+        margin-top: 5px;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Background Hearts -->
+    <script>
+        for(let i = 0; i < 15; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '💕';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 10 + 's';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            document.body.appendChild(heart);
+        }
+    </script>
+<div class="container">
+    <div id="quiz">
+        <h1>💕 Ciao Baby EVA 💕</h1>
+        <p class="intro">
+            Il tuo TATO ha preparato qualcosa di speciale per te! 
+            Rispondi a queste domande e scopri quanto mi conosci... 😘
+        </p>
+
+        <div class="question-container">
+            <div class="question">1. Come mi chiami con affetto? 🥰</div>
+            <input type="text" id="q1" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">2. Come ti chiamo io? 💝</div>
+            <input type="text" id="q2" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">3. Qual è il mio nome? 💖</div>
+            <input type="text" id="q3" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">4. Quando è il mio compleanno? 🎂</div>
+            <input type="date" id="q4">
+            <div class="hint">Seleziona la data dal calendario</div>
+        </div>
+
+        <div class="question-container">
+            <div class="question">5. Qual è il mio colore preferito? 🎨</div>
+            <input type="text" id="q5" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">6. Quale cibo mi piace di più? 🍕</div>
+            <input type="text" id="q6" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">7. Qual è il nostro posto preferito insieme? 💑</div>
+
+SCUOLA, [22/11/2025 22:20]
+<input type="text" id="q7" placeholder="Scrivi qui...">
+        </div>
+
+        <div class="question-container">
+            <div class="question">8. Qual è la mia canzone preferita? 🎵</div>
+            <input type="text" id="q8" placeholder="Scrivi qui...">
+        </div>
+
+        <button class="btn" onclick="checkAnswers()">Controlla le Risposte 💫</button>
+    </div>
+
+    <div id="result" class="result"></div>
+</div>
+
+<!-- Audio Control Button -->
+<div class="audio-control" id="audioToggle" onclick="toggleAudio()">
+    <span id="audioIcon">🔇</span>
+</div>
+
+<!-- 
+===== ISTRUZIONI PER AGGIUNGERE MUSICA =====
+
+Per aggiungere la tua musica preferita da YouTube:
+
+1. Vai su YouTube e trova la canzone che vuoi
+2. Copia il VIDEO ID dall'URL (esempio: se l'URL è https://www.youtube.com/watch?v=dQw4w9WgXcQ, 
+   il VIDEO ID è "dQw4w9WgXcQ")
+3. Sostituisci "INSERISCI_VIDEO_ID_QUI" qui sotto con il tuo VIDEO ID
+
+===== IMPORTANTE: AGGIUNGI LE TUE RISPOSTE =====
+
+Nella sezione JavaScript qui sotto (riga ~320), modifica le risposte corrette con le tue informazioni:
+
+const correctAnswers = {
+    q1: 'tato',                    // Come ti chiama Eva
+    q2: 'baby',                    // Come chiami Eva
+    q3: 'ahmed',                   // Il tuo nome
+    q4: '2000-01-15',             // Il tuo compleanno (formato: YYYY-MM-DD)
+    q5: 'blu',                     // Il tuo colore preferito
+    q6: 'pizza',                   // Il tuo cibo preferito
+    q7: 'parco',                   // Il vostro posto preferito
+    q8: 'perfect'                  // La tua canzone preferita
+};
+-->
+
+<iframe 
+    id="youtubeAudio"
+    width="0" 
+    height="0" 
+    src="https://www.youtube.com/embed/INSERISCI_VIDEO_ID_QUI?autoplay=0&loop=1&playlist=INSERISCI_VIDEO_ID_QUI&controls=0&mute=0"
+    allow="autoplay; encrypted-media"
+    style="display:none;">
+</iframe>
+
+<script>
+    let audioPlaying = false;
+    const iframe = document.getElementById('youtubeAudio');
+
+    function toggleAudio() {
+        const icon = document.getElementById('audioIcon');
+        if (!audioPlaying) {
+            const src = iframe.src.replace('autoplay=0', 'autoplay=1');
+            iframe.src = src;
+            icon.textContent = '🔊';
+            audioPlaying = true;
+        } else {
+            const src = iframe.src.replace('autoplay=1', 'autoplay=0');
+            iframe.src = src;
+            icon.textContent = '🔇';
+            audioPlaying = false;
+        }
+    }
+
+    function checkAnswers() {
+        const q1 = document.getElementById('q1').value.trim().toLowerCase();
+        const q2 = document.getElementById('q2').value.trim().toLowerCase();
+        const q3 = document.getElementById('q3').value.trim().toLowerCase();
+        const q4 = document.getElementById('q4').value; // Date format
+        const q5 = document.getElementById('q5').value.trim().toLowerCase();
+        const q6 = document.getElementById('q6').value.trim().toLowerCase();
+        const q7 = document.getElementById('q7').value.trim().toLowerCase();
+        const q8 = document.getElementById('q8').value.trim().toLowerCase();
+
+        // ===== MODIFICA QUESTE RISPOSTE CON LE TUE INFORMAZIONI! =====
+        const correctAnswers = {
+            q1: 'tato',                    // Come ti chiama Eva
+            q2: 'baby',                    // Come chiami Eva
+            q3: 'ahmed',                   // Il tuo nome
+            q4: '28 11 2009',             // Il tuo compleanno (formato: YYYY-MM-DD, esempio: 2000-01-15)
+            q5: 'io',                     // Il tuo colore preferito
+            q6: 'io',                   // Il tuo cibo preferito
+            q7: 'io',                   // Il vostro posto preferito
+            q8: 'la mia bacio '                  // La tua canzone preferita (solo il titolo o parola chiave)
+        };
+
+        // Check if all answers are correct
+        let score = 0;
+        let total = 8;
+        let wrongAnswers = [];
+
+        if (q1 === correctAnswers.q1) score++; else wrongAnswers.push('1');
+        if (q2 === correctAnswers.q2) score++; else wrongAnswers.
+
+SCUOLA, [22/11/2025 22:20]
+push('2');
+        if (q3 === correctAnswers.q3) score++; else wrongAnswers.push('3');
+        if (q4 === correctAnswers.q4) score++; else wrongAnswers.push('4');
+        if (q5 === correctAnswers.q5) score++; else wrongAnswers.push('5');
+        if (q6 === correctAnswers.q6) score++; else wrongAnswers.push('6');
+        if (q7 === correctAnswers.q7) score++; else wrongAnswers.push('7');
+        if (q8 === correctAnswers.q8) score++; else wrongAnswers.push('8');
+
+        if (score === total) {
+            showSuccess();
+        } else {
+            showFailure(score, total, wrongAnswers);
+        }
+    }
+
+    function showSuccess() {
+        document.getElementById('quiz').style.display = 'none';
+        const result = document.getElementById('result');
+        result.className = 'result success';
+        result.innerHTML = `
+            <div class="hearts-burst">💕💖💝💗💓💞</div>
+            <h2>Perfetto Baby EVA! 🎉</h2>
+            <div class="romantic-message">
+                <p><strong>Hai risposto a tutto correttamente!</strong> 💫</p>
+                <p>Sei incredibile! Sapevo che mi conosci perfettamente perché 
+                siamo fatti l'uno per l'altra! 💕</p>
+                <p>Ogni momento con te è magico. Ogni risata, ogni sguardo, 
+                ogni parola... tutto con te è speciale! 🌹</p>
+                <p>Tu sei il mio mondo, la mia Baby, la ragione per cui 
+                ogni giorno è bellissimo! Non potrei immaginare la mia vita senza di te! 💖</p>
+                <p><strong>Il tuo TATO ti ama più di quanto le parole possano esprimere! 💖</strong></p>
+                <p style="font-size: 1.8em; margin-top: 20px;">
+                    Eva + Ahmed = Amore Eterno ∞
+                </p>
+            </div>
+            <div class="hearts-burst">💕💖💝💗💓💞</div>
+            <p style="font-size: 1.5em; margin-top: 30px;">
+                Ti amo con tutto il mio cuore, Baby! 😘💋
+            </p>
+            <p style="font-size: 1.2em; color: #764ba2; margin-top: 20px;">
+                Sei e sarai sempre la mia unica! 👑💕
+            </p>
+        `;
+        result.style.display = 'block';
+        createSparkles();
+    }
+
+    function showFailure(score, total, wrongAnswers) {
+        const result = document.getElementById('result');
+        result.className = 'result failure';
+        result.innerHTML = `
+            <p style="font-size: 1.5em;">😅 Quasi perfetto Baby!</p>
+            <p style="font-size: 1.3em; margin: 20px 0;">
+                Hai risposto correttamente a <strong>${score}</strong> domande su <strong>${total}</strong>! 💕
+            </p>
+            <p>Le domande ${wrongAnswers.join(', ')} necessitano più attenzione... 😊</p>
+            <p style="margin: 20px 0;">Ma va bene comunque, ti amo lo stesso! 💖</p>
+            <button class="btn" onclick="location.reload()">Riprova Baby 🔄</button>
+        `;
+        result.style.display = 'block';
+    }
+
+    function createSparkles() {
+        for(let i = 0; i < 30; i++) {
+            setTimeout(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                document.querySelector('.container').appendChild(sparkle);
+            }, i * 100);
+        }
+    }
+</script>
+
+</body>
+</html>
