@@ -1,4 +1,3 @@
-SCUOLA, [22/11/2025 22:20]
 <!DOCTYPE html>
 
 <html lang="it">
@@ -163,7 +162,9 @@ SCUOLA, [22/11/2025 22:20]
     }
 
     .result {
-        display: none; animation: slideIn 0.8s;
+        display: none;
+
+animation: slideIn 0.8s;
     }
 
     @keyframes slideIn {
@@ -305,11 +306,9 @@ SCUOLA, [22/11/2025 22:20]
             <div class="hint">Seleziona la data dal calendario</div>
         </div>
 
-        </div>
-
         <div class="question-container">
             <div class="question">5. Qual è la mia canzone preferita? 🎵</div>
-            <input type="text" id="q8" placeholder="Scrivi qui...">
+            <input type="text" id="q5" placeholder="Scrivi qui...">
         </div>
 
         <button class="btn" onclick="checkAnswers()">Controlla le Risposte 💫</button>
@@ -323,7 +322,9 @@ SCUOLA, [22/11/2025 22:20]
     <span id="audioIcon">🔇</span>
 </div>
 
-<!-- 
+<!--
+
+
 ===== ISTRUZIONI PER AGGIUNGERE MUSICA =====
 
 Per aggiungere la tua musica preferita da YouTube:
@@ -331,22 +332,11 @@ Per aggiungere la tua musica preferita da YouTube:
 1. Vai su YouTube e trova la canzone che vuoi
 2. Copia il VIDEO ID dall'URL (esempio: se l'URL è https://www.youtube.com/watch?v=dQw4w9WgXcQ, 
    il VIDEO ID è "dQw4w9WgXcQ")
-3. Sostituisci "INSERISCI_VIDEO_ID_QUI" qui sotto con il tuo VIDEO ID
+3. Sostituisci "INSERISCI_VIDEO_ID_QUI" qui sotto con il tuo VIDEO ID (appare 2 volte)
 
-===== IMPORTANTE: AGGIUNGI LE TUE RISPOSTE =====
+===== IMPORTANTE: MODIFICA LE RISPOSTE CORRETTE =====
 
-Nella sezione JavaScript qui sotto (riga ~320), modifica le risposte corrette con le tue informazioni:
-
-const correctAnswers = {
-    q1: 'tato',                    // Come ti chiama Eva
-    q2: 'baby',                    // Come chiami Eva
-    q3: 'ahmed',                   // Il tuo nome
-    q4: '2000-01-15',             // Il tuo compleanno (formato: YYYY-MM-DD)
-    q5: 'blu',                     // Il tuo colore preferito
-    q6: 'pizza',                   // Il tuo cibo preferito
-    q7: 'parco',                   // Il vostro posto preferito
-    q8: 'perfect'                  // La tua canzone preferita
-};
+Nel JavaScript qui sotto, modifica le risposte con le tue informazioni personali!
 -->
 
 <iframe 
@@ -381,40 +371,28 @@ const correctAnswers = {
         const q1 = document.getElementById('q1').value.trim().toLowerCase();
         const q2 = document.getElementById('q2').value.trim().toLowerCase();
         const q3 = document.getElementById('q3').value.trim().toLowerCase();
-        const q4 = document.getElementById('q4').value; // Date format
+        const q4 = document.getElementById('q4').value; // Date format YYYY-MM-DD
         const q5 = document.getElementById('q5').value.trim().toLowerCase();
-        const q6 = document.getElementById('q6').value.trim().toLowerCase();
-        const q7 = document.getElementById('q7').value.trim().toLowerCase();
-        const q8 = document.getElementById('q8').value.trim().toLowerCase();
 
         // ===== MODIFICA QUESTE RISPOSTE CON LE TUE INFORMAZIONI! =====
         const correctAnswers = {
-            q1: 'tato',                    // Come ti chiama Eva
-            q2: 'baby',                    // Come chiami Eva
-            q3: 'ahmed',                   // Il tuo nome
-            q4: '28 11 2009',             // Il tuo compleanno (formato: YYYY-MM-DD, esempio: 2000-01-15)
-            q5: 'io',                     // Il tuo colore preferito
-            q6: 'io',                   // Il tuo cibo preferito
-            q7: 'io',                   // Il vostro posto preferito
-            q8: 'la mia bacio '                  // La tua canzone preferita (solo il titolo o parola chiave)
+            q1: 'tato',                      // Come ti chiama Eva
+            q2: 'baby',                      // Come chiami Eva
+            q3: 'ahmed',                     // Il tuo nome
+            q4: '2009-11-28',               // Il tuo compleanno (formato: YYYY-MM-DD)
+            q5: 'la mia bacio'              // La tua canzone preferita
         };
 
-        // Check if all answers are correct
+        // Conteggio risposte corrette
         let score = 0;
-        let total = 8;
+        let total = 5;
         let wrongAnswers = [];
 
         if (q1 === correctAnswers.q1) score++; else wrongAnswers.push('1');
-        if (q2 === correctAnswers.q2) score++; else wrongAnswers.
-
-
-push('2');
+        if (q2 === correctAnswers.q2) score++; else wrongAnswers.push('2');
         if (q3 === correctAnswers.q3) score++; else wrongAnswers.push('3');
         if (q4 === correctAnswers.q4) score++; else wrongAnswers.push('4');
         if (q5 === correctAnswers.q5) score++; else wrongAnswers.push('5');
-        if (q6 === correctAnswers.q6) score++; else wrongAnswers.push('6');
-        if (q7 === correctAnswers.q7) score++; else wrongAnswers.push('7');
-        if (q8 === correctAnswers.q8) score++; else wrongAnswers.push('8');
 
         if (score === total) {
             showSuccess();
@@ -443,7 +421,8 @@ push('2');
                     Eva + Ahmed = Amore Eterno ∞
                 </p>
             </div>
-            <div class="hearts-burst">💕💖💝💗💓💞</div>
+
+<div class="hearts-burst">💕💖💝💗💓💞</div>
             <p style="font-size: 1.5em; margin-top: 30px;">
                 Ti amo con tutto il mio cuore, Baby! 😘💋
             </p>
